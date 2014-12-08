@@ -31,7 +31,9 @@ IDL_EXTENSIONS+=C.h C.cpp S.cpp C.inl S.h
 endif
 CASTOR:= alma.tools.entitybuilder.CastorBuilder
 OMNI_IDL=omniidl
+ifeq ($(CROSS_COMPILE),)
 TAO_IDL = $(TAO_ROOT)/TAO_IDL/tao_idl
+endif
 #TAO_IDLFLAGS+=-ciC.i -siS.i -stS_T.i
 #TAO_IDLFLAGS+=-ci -si -st
 ### OMNI_IDL = $(OMNI_ROOT)/bin/$(FARCH)/omniidl

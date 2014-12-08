@@ -300,7 +300,7 @@ void ErrorTraceHelper::log(ACE_Log_Priority priorty)
   unsigned int i=0;
   ACSErr::ErrorTrace *c = m_errorTracePtr;
   char uuidBuf[40];
-  ACE_Utils::UUID* uuid = ACE_Utils::UUID_GENERATOR::instance ()->generate_UUID ();
+  ACE_Utils::UUID* uuid = UUID_GENERATOR::instance ()->generate_UUID ();
 
   snprintf(uuidBuf, 40, "%s", uuid->to_string()->c_str());
   delete uuid;

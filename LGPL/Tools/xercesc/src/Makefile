@@ -23,6 +23,13 @@ XERCES_VER = src_2_8_0
 XERCES_MAJOR_VER = 28
 export XERCESCROOT=$(CURDIR)/xerces-c-$(XERCES_VER)
 
+ifeq ($(CROSS_COMPILE),)
+CXX := g++
+CC := gcc
+else
+CXX := $(CROSS_COMPILE)-g++
+CC := $(CROSS_COMPILE)-gcc
+endif
 
 #
 # Scripts (public and local)
@@ -83,7 +90,7 @@ configure : unpack
 	@echo "cwd is: $(CURDIR)"
 	@ cd xerces-c-$(XERCES_VER)/src/xercesc; autoconf
 	@ cd xerces-c-$(XERCES_VER)/src/xercesc; \
-	./runConfigure -P $(INSTALL_ROOT) -plinux -cgcc -xg++ -minmem -nsocket -tnative -rpthread > configure.log 2>&1
+	./runConfigure -P $(INSTALL_ROOT) -plinux -c$(CC) -x$(CXX) -minmem -nsocket -tnative -rpthread > configure.log 2>&1
 
 .NOTPARALLE: build_xerces
 build_xerces : configure

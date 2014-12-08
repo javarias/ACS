@@ -32,5 +32,9 @@ else
 fi
 
 ## Here I validate the Error Definition XML file
-java -cp "$ACSROOT/lib/xmlvalidator.jar" alma.acs.xml.validator.XMLValidator $1 $ERROR_SCHEMA
+if [ -z $CROSS_COMPILE ]; then
+    java -cp "$ACSROOT/lib/xmlvalidator.jar" alma.acs.xml.validator.XMLValidator $1 $ERROR_SCHEMA
+else
+    java -cp "$HOST_ACSROOT/lib/xmlvalidator.jar" alma.acs.xml.validator.XMLValidator $1 $ERROR_SCHEMA
+fi
 exit $?

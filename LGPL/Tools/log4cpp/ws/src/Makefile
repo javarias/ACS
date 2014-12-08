@@ -102,6 +102,9 @@ SCRIPTS_L       =
 # Need to treat 'make install' and 'make tests' special also. But 'make clean_build' already cleans the tests.
 .PHONY : all
 all: configure
+	$(shell cat log4cpp-$(LOG4CPP_VER)/tests/Makefile | sed 's/-lnsl/-lnsl -lpthread -lrt/g' > log4cpp-$(LOG4CPP_VER)/tests/Makefile.new)
+	cp log4cpp-$(LOG4CPP_VER)/tests/Makefile log4cpp-$(LOG4CPP_VER)/tests/Makefile.old
+	cp log4cpp-$(LOG4CPP_VER)/tests/Makefile.new log4cpp-$(LOG4CPP_VER)/tests/Makefile
 	@echo ". . . building . . ."
 	$(MAKE) $(MAKE_PARS) -C log4cpp-$(LOG4CPP_VER) all
 	$(MAKE) -f tests.Makefile all
@@ -285,6 +288,9 @@ log4cpp-$(LOG4CPP_VER) :
 .PHONY : patch 
 patch : unpack log4cpp-$(LOG4CPP_VER)
 
+ifneq ($(CROSS_COMPILE),)
+EXTRA_CONFIGURE_PARAMS := --host $(CROSS_COMPILE)
+endif
 # File name of one configure result. Created by configure.
 # Create only if not existing, therefore no dependencies.
 # Attention!
@@ -295,7 +301,7 @@ log4cpp-$(LOG4CPP_VER)/Makefile :
 	@echo ". . . running configure . . ."
 	echo "   log4cpp tar file is: log4cpp-$(LOG4CPP_TAR).tar.gz" >configure.log
 	echo "   log4cpp version  is: $(LOG4CPP_VER)" >>configure.log
-	cd log4cpp-$(LOG4CPP_VER); ./configure --enable-shared --prefix=$(INSTALL_DIR) >>../configure.log 2>&1
+	cd log4cpp-$(LOG4CPP_VER); ./configure --enable-shared $(EXTRA_CONFIGURE_PARAMS) --prefix=$(INSTALL_DIR) >>../configure.log 2>&1
 	@echo " . . . configuration file created"
 
 # Do the configure only once if not done now. Use Makefile existence as indicator.

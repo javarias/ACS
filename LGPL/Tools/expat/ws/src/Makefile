@@ -167,13 +167,18 @@ ifneq ($(MAKEDIRTMP),\#error\#)
    include $(MAKEDIR)/acsMakefile
 endif
 
+ifneq ($(CROSS_COMPILE),)
+    CONFIGURE_EXTRA_FLAGS := --host $(CROSS_COMPILE)
+endif
 #
 # TARGETS
 # -------
-all:	do_all
+all: configure do_all
+	make -C expat-2.1.0
 	@echo " . . . 'all' done" 
 
-clean : clean_all 
+clean : clean_all
+	rm -rf expat-2.1.0
 	@echo " . . . clean done"
 
 clean_dist : clean_all clean_dist_all 
@@ -183,6 +188,12 @@ man   : do_man
 	@echo " . . . man page(s) done"
 
 install : install_all
+	make -C expat-2.1.0 install
 	@echo " . . . installation done"
 
+untar: expat-2.1.0.tar.gz
+	tar -xvzf expat-2.1.0.tar.gz
+
+configure: untar
+	cd expat-2.1.0; ./configure $(CONFIGURE_EXTRA_FLAGS) --prefix=$(INSTALL_DIR)
 #___oOo___

@@ -556,7 +556,7 @@ bool ACSError::init ()
 #endif
     orb = CORBA::ORB::_nil();
 
-    ACE_Utils::UUID_GENERATOR::instance ()->init ();
+    UUID_GENERATOR::instance ()->init ();
     
     m_oldUnexpected = std::set_unexpected(acserrUnspecifiedExHandler);
     m_oldTerminate = std::set_terminate(acserrUncaughtExHandler);
