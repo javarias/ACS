@@ -1,0 +1,15 @@
+#!/bin/bash
+export CROSS_TOOLS_HOME=$HOME/x-tools/armv6-rpi-linux-gnueabi
+export PATH=$PATH:$CROSS_TOOLS_HOME/bin
+export GNU_ROOT=$CROSS_TOOLS_HOME
+export CROSS_COMPILE=armv6-rpi-linux-gnueabi
+export TAO_IDL="$ACE_ROOT/TAO/TAO_IDL/tao_idl -g $ACE_ROOT/bin/ace_gperf" 
+export OLD_LIBRARY_PATH=$LD_LIBRARY_PATH
+export LD_LIBRARY_PATH=$ACSROOT/lib:$ACE_ROOT/lib
+CLASSPATH=`vltMakeJavaClasspath`
+export HOST_ACSROOT=$ACSROOT
+ACSROOT=$ALMASW_ROOTDIR/$CROSS_COMPILE/$ALMASW_RELEASE/ACSSW
+unset DDS_ROOT
+ACE_ROOT_DIR=$ALMASW_ROOTDIR/$CROSS_COMPILE/$ALMASW_RELEASE/TAO/ACE_wrappers/build
+ACE_ROOT=$ACE_ROOT_DIR/linux
+export MAKE_ONLY=C++

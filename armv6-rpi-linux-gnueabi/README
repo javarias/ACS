@@ -1,0 +1,23 @@
+Still some stuff are made by hand.
+
+This should be solved in some point.
+
+After compile crosstool-ng , it should be compiled TAO
+
+Load bash_profile.cross.acs 
+
+source bash_profile.cross.acs
+
+To compile TAO, it is mandatory copy those files:
+
+cp platform_macros.GNU $(ACSROOT)/../TAO/ACE_wrappers/build/linux/include/makeinclude/platform_macros.GNU
+cp config.h $(ACSROOT)/../TAO/ACE_wrappers/build/linux/ace/config.h
+cp platform_linux_common.GNU $(ACSROOT)/../TAO/ACE_wrappers/include/makeinclude/platform_linux_common.GNU
+cp platform_linux.GNU $(ACSROOT)/../TAO/ACE_wrappers/include/makeinclude/platform_linux.GNU
+
+
+Then compile in this order:
+
+cd $ACE_ROOT/TAO/tao ; make -j4
+cd $ACE_ROOT/TAO/orbsvcs; make -j4
+cd $ACE_ROOT/TAO/utils; make -j4
