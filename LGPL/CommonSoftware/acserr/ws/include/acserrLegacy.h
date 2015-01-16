@@ -42,8 +42,7 @@
 #include <exception>
 #include <ace/UUID.h>
 
-
-typedef ACE_Singleton<ACE_Utils::UUID_Generator, ACE_Thread_Mutex> UUID_GENERATOR; 
+static ACE_Utils::UUID_Generator UUID_GENERATOR;
 // for backward compatibilty reason
 namespace ACSErr {
     const ErrorCode ACSErrOK = ACSErrOK;

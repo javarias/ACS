@@ -90,7 +90,7 @@ configure : unpack
 	@echo "cwd is: $(CURDIR)"
 	@ cd xerces-c-$(XERCES_VER)/src/xercesc; autoconf
 	@ cd xerces-c-$(XERCES_VER)/src/xercesc; \
-	./runConfigure -P $(INSTALL_ROOT) -plinux -c$(CC) -x$(CXX) -minmem -nsocket -tnative -rpthread > configure.log 
+	./runConfigure -P $(INSTALL_ROOT) -plinux -c$(CC) -x$(CXX) -C --host=arm-linux  -minmem -nsocket -tnative -rpthread > configure.log 
 
 .NOTPARALLE: build_xerces
 build_xerces : configure

@@ -191,9 +191,11 @@ install : install_all
 	make -C expat-2.1.0 install
 	@echo " . . . installation done"
 
-untar: expat-2.1.0.tar.gz
+untar:
+	$(shell ./download.sh)
 	tar -xvzf expat-2.1.0.tar.gz
 
 configure: untar
 	cd expat-2.1.0; ./configure $(CONFIGURE_EXTRA_FLAGS) --prefix=$(INSTALL_DIR)
+
 #___oOo___

@@ -51,7 +51,7 @@ maciContainer_LIBS = maci acsContainerServices acsComponentListener TAO_CosNotif
 		TAO_PortableServer TAO ACE baselogging acsutil loki TAO_DynamicAny TAO_IFR_Client
 
 maciManagerShutdown_OBJECTS = maciManagerShutdown
-maciManagerShutdown_LIBS = maci maciStubs ACE TAO TAO_PortableServer baselogging acsutil loki logging baselogging
+maciManagerShutdown_LIBS = maci maciStubs ACE TAO TAO_PortableServer baselogging acsutil loki logging baselogging acserr
 
 maciContainerShutdown_OBJECTS = maciContainerShutdown
 maciContainerShutdown_LIBS = maci maciStubs ACE TAO TAO_PortableServer loki logging baselogging 
