@@ -76,11 +76,24 @@ INCLUDES        =
 # Libraries (public and local)
 # ----------------------------
 LIBRARIES       =
-LIBRARIES_L     =
+LIBRARIES_L     = MCtestComponent MCtestPropertiesComponent MCtestAlarmsComponent MCmockBlobber MCmockController
 
 #
 # <brief description of lllll library>
-lllll_OBJECTS   =
+MCtestComponent_OBJECTS = MCtestComponentImpl
+MCtestComponent_LIBS= MCtestComponentStubs baci acscomponent
+
+MCtestPropertiesComponent_OBJECTS = MCtestPropertiesComponentImpl
+MCtestPropertiesComponent_LIBS= MCtestComponentStubs baci
+
+MCtestAlarmsComponent_OBJECTS = MCtestAlarmsComponentImpl
+MCtestAlarmsComponent_LIBS= MCtestComponentStubs baci ACSErrTypeDevIO ACSErrTypeCommon acscomponent
+
+MCmockBlobber_OBJECTS = MCmockBlobberImpl
+MCmockBlobber_LIBS = baci MonitorArchiverIFStubs CollectorListStatusStubs acscomponent MonitorErr 
+
+MCmockController_OBJECTS = MCmockControllerImpl
+MCmockController_LIBS = baci MonitorArchiverIFStubs CollectorListStatusStubs acscomponent MonitorErr
 
 #
 # Scripts (public and local)
@@ -98,7 +111,10 @@ TCL_SCRIPTS_L   =
 # Python stuff (public and local)
 # ----------------------------
 PY_SCRIPTS         =
-PY_SCRIPTS_L       =
+PY_SCRIPTS_L       = mcTestRegisterDevice mcTestRegisterDeviceWithMultipleSerial  mcTestDeviceWithSeqAndMultipleSerial \
+                  mcTestRegisterNonCollocatedDevice \
+						mcTestComponent mcTestCyclicBuffer mcTestPropertiesComponent mcTestDynEnable mcTestDynSuppress mcTestDynInterval \
+                  mcTestDynSupEn mcTestAlarmsComponent mcTestArchiveDelta mcTestArchiveDeltaPercent #mcTestManualPublish mcTestManualPublishOnSuppressed
 
 PY_MODULES         =
 PY_MODULES_L       =
@@ -132,7 +148,7 @@ PANELS_L =
 #
 # IDL Files and flags
 #
-IDL_FILES = testSimpleMasterComponent testSeqTestingComponent testPrimTestingComponent testjBaciEnumProp
+IDL_FILES = testSimpleMasterComponent testSeqTestingComponent testPrimTestingComponent testjBaciEnumProp MCtestComponent
 IDL_TAO_FLAGS =
 USER_IDL = 
 testSimpleMasterComponentStubs_LIBS = baciStubs
