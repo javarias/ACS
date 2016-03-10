@@ -19,10 +19,10 @@
 	<_ Name="LAMP1" Code="acsexmplLampImpl" Type="IDL:alma/acsexmplLamp/Lamp:1.0" Container="monColTestCont" ImplLang="cpp" />
 	<_ Name="FRIDGE1" Code="acsexmplFridgeImpl" Type="IDL:alma/FRIDGE/FridgeControl:1.0" Container="monColTestCont" ImplLang="cpp" />
 	<_ Name="AMSSEQ1" Code="acsexmplAmsSeqImpl" Type="IDL:alma/AMSSEQ/AmsTestSeq:1.0"    Container="monColTestCont" ImplLang="cpp" />
-	<_ Name="MC_TEST_COMPONENT" Code="MCtestComponent" Type="IDL:alma/TMCDB/MCtestComponent:1.0"    Container="monColTestCont" ImplLang="cpp" />
-	<_ Name="MC_TEST_COMPONENT2" Code="MCtestComponent" Type="IDL:alma/TMCDB/MCtestComponent:1.0"    Container="monColTestCont" ImplLang="cpp" />
-	<_ Name="MC_TEST_COMPONENT3" Code="MCtestComponent" Type="IDL:alma/TMCDB/MCtestComponent:1.0"    Container="monColTestCont" ImplLang="cpp" />
-	<_ Name="MC_TEST_COMPONENT4" Code="MCtestComponent" Type="IDL:alma/TMCDB/MCtestComponent:1.0"    Container="monColTestCont" ImplLang="cpp" />
+	<_ Name="MC_TEST_COMPONENT" Code="tmcdb.test.MCtestComponentImplHelper" Type="IDL:alma/TMCDB/MCtestComponent:1.0"    Container="monColTestContJava" ImplLang="java" />
+	<_ Name="MC_TEST_COMPONENT2" Code="tmcdb.test.MCtestComponentImplHelper" Type="IDL:alma/TMCDB/MCtestComponent:1.0"    Container="monColTestContJava" ImplLang="java" />
+	<_ Name="MC_TEST_COMPONENT3" Code="tmcdb.test.MCtestComponentImplHelper" Type="IDL:alma/TMCDB/MCtestComponent:1.0"    Container="monColTestContJava" ImplLang="java" />
+	<_ Name="MC_TEST_COMPONENT4" Code="tmcdb.test.MCtestComponentImplHelper" Type="IDL:alma/TMCDB/MCtestComponent:1.0"    Container="monColTestContJava" ImplLang="java" />
 	<_ Name="MC_TEST_PROPERTIES_COMPONENT" Code="MCtestPropertiesComponent" Type="IDL:alma/TMCDB/MCtestPropertiesComponent:1.0"    Container="monColTestCont" ImplLang="cpp" />
 	<_ Name="MC_TEST_ALARMS_COMPONENT" Code="MCtestAlarmsComponent" Type="IDL:alma/TMCDB/MCtestAlarmsComponent:1.0"    Container="monColTestCont" ImplLang="cpp" />
 	<_ Name="ARCHIVE/TMCDB/MONITOR_BLOBBER" Code="MCmockBlobber" Type="IDL:alma/MonitorArchiver/Blobber:1.0"    Container="monColTestCont" ImplLang="cpp" />

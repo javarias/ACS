@@ -44,3 +44,4 @@ acsutilAwaitContainerStart -cpp separateTestCont
 echo " Starting Java Container"
 export JAVA_OPTIONS="-Dacs.container.fakeUIDsForTesting=true"
 acsutilAwaitContainerStart -java frodoContainer
+acsutilAwaitContainerStart -java monColTestContJava

@@ -159,7 +159,7 @@ testjBaciEnumPropStubs_LIBS = baciStubs enumpropStdStubs
 # Jarfiles and their directories
 #
 JARFILES = jbaciTest
-jbaciTest_DIRS = alma
+jbaciTest_DIRS = alma tmcdb
 jbaciTest_EXTRAS =
 USER_JFLAGS=
 
