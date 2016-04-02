@@ -1,0 +1,109 @@
+/******************************************************************************** $Id: JacPrep,v 1.13 2010/01/04 15:34:48 gchiozzi Exp $
+* DO NOT EDIT
+* Automatically generated from ../idl/MCtestComponent.midl
+* on Fri Mar  4 22:53:38 2016
+*******************************************************************************/
+#ifndef _MCtestComponent_midl_
+#define _MCtestComponent_midl_
+#ifndef _ACS_PREPROCESSED_
+#define _ACS_PREPROCESSED_
+#endif
+#include <acscommon.idl>
+#include <baci.idl>
+#include <enumpropMACRO.idl>
+
+
+
+
+#pragma prefix "alma"
+
+
+module TMCDB
+{
+
+
+ interface MCtestComponent : ACS::CharacteristicComponent
+    {
+ readonly attribute ACS::ROdoubleSeq doubleSeqProp;
+ readonly attribute ACS::ROdouble doubleProp;
+
+ readonly attribute ACS::RWlongSeq longSeqProp;
+ readonly attribute ACS::RWlong longProp;
+
+ readonly attribute ACS::ROpattern patternProp;
+
+
+ void reset();
+    };
+
+
+ enum EnumTest {STATE1, STATE2, STATE3};
+
+ typedef sequence<EnumTest> EnumTestSeq; interface CBEnumTest : ACS::Callback { oneway void working(in EnumTest value, in ACSErr::Completion c, in ACS::CBDescOut desc); oneway void done(in EnumTest value, in ACSErr::Completion c, in ACS::CBDescOut desc); };
+typedef CBEnumTest EnumTestCB; interface AlarmEnumTest : ACS::Callback { oneway void alarm_raised(in EnumTest value, in ACSErr::Completion c, in ACS::CBDescOut desc); oneway void alarm_cleared(in EnumTest value, in ACSErr::Completion c, in ACS::CBDescOut desc); };
+ typedef AlarmEnumTest EnumTestAlarm; interface PEnumTest: ACS::TypelessProperty { EnumTest get_sync(out ACSErr::Completion c); void get_async(in ACS::CBpattern cb, in ACS::CBDescIn desc); long get_history(in long n_last_values, out EnumTestSeq vs, out ACS::TimeSeq ts); ACS::Monitorpattern create_monitor(in ACS::CBpattern cb, in ACS::CBDescIn desc); ACS::Monitor create_postponed_monitor (in ACS::Time start_time, in ACS::CBpattern cb, in ACS::CBDescIn desc); readonly attribute ACS::TimeInterval default_timer_trigger; readonly attribute ACS::TimeInterval min_timer_trigger; readonly attribute EnumTest default_value; readonly attribute ACS::stringSeq statesDescription; readonly attribute ACS::ConditionSeq condition; readonly attribute EnumTestSeq allStates; };
+ interface ROEnumTest: PEnumTest{ ACS::Subscription new_subscription_AlarmEnum(in ACS::Alarmpattern cb, in ACS::CBDescIn desc); readonly attribute EnumTestSeq alarm_on; readonly attribute EnumTestSeq alarm_off; };
+ interface RWEnumTest: PEnumTest { ACSErr::Completion set_sync(in EnumTest value); void set_async(in EnumTest value, in ACS::CBvoid cb, in ACS::CBDescIn desc); void set_nonblocking(in EnumTest value);};
+
+
+ interface MCtestPropertiesComponent : ACS::CharacteristicComponent
+ {
+  readonly attribute ACS::ROdouble doubleROProp;
+  readonly attribute ACS::ROfloat floatROProp;
+  readonly attribute ACS::ROlong longROProp;
+  readonly attribute ACS::ROuLong uLongROProp;
+  readonly attribute ACS::ROpattern patternROProp;
+  readonly attribute ACS::ROstring stringROProp;
+  readonly attribute ACS::ROlongLong longLongROProp;
+  readonly attribute ACS::ROuLongLong uLongLongROProp;
+  readonly attribute ACS::ROboolean booleanROProp;
+  readonly attribute ACS::ROdoubleSeq doubleSeqROProp;
+  readonly attribute ACS::ROfloatSeq floatSeqROProp;
+  readonly attribute ACS::ROlongSeq longSeqROProp;
+  readonly attribute ACS::ROuLongSeq uLongSeqROProp;
+  readonly attribute ACS::RObooleanSeq booleanSeqROProp;
+  readonly attribute ROEnumTest EnumTestROProp;
+
+  readonly attribute ACS::RWdouble doubleRWProp;
+  readonly attribute ACS::RWfloat floatRWProp;
+  readonly attribute ACS::RWlong longRWProp;
+  readonly attribute ACS::RWuLong uLongRWProp;
+  readonly attribute ACS::RWpattern patternRWProp;
+  readonly attribute ACS::RWstring stringRWProp;
+  readonly attribute ACS::RWlongLong longLongRWProp;
+  readonly attribute ACS::RWuLongLong uLongLongRWProp;
+  readonly attribute ACS::RWboolean booleanRWProp;
+  readonly attribute ACS::RWdoubleSeq doubleSeqRWProp;
+  readonly attribute ACS::RWfloatSeq floatSeqRWProp;
+  readonly attribute ACS::RWlongSeq longSeqRWProp;
+  readonly attribute ACS::RWuLongSeq uLongSeqRWProp;
+  readonly attribute ACS::RWbooleanSeq booleanSeqRWProp;
+  readonly attribute RWEnumTest EnumTestRWProp;
+ };
+
+
+ interface MCtestAlarmsComponent : ACS::CharacteristicComponent
+ {
+  readonly attribute ACS::ROdouble doubleROProp;
+  readonly attribute ACS::ROfloat floatROProp;
+  readonly attribute ACS::ROlong longROProp;
+  readonly attribute ACS::ROuLong uLongROProp;
+  readonly attribute ACS::ROlongLong longLongROProp;
+  readonly attribute ACS::ROuLongLong uLongLongROProp;
+  readonly attribute ACS::ROboolean booleanROProp;
+  readonly attribute ACS::ROdoubleSeq doubleSeqROProp;
+  readonly attribute ACS::ROfloatSeq floatSeqROProp;
+  readonly attribute ACS::ROlongSeq longSeqROProp;
+  readonly attribute ACS::ROuLongSeq uLongSeqROProp;
+  readonly attribute ACS::RObooleanSeq booleanSeqROProp;
+  readonly attribute ROEnumTest EnumTestROProp;
+
+  void reset();
+  void increase();
+  void decrease();
+ };
+
+
+};
+
+#endif
