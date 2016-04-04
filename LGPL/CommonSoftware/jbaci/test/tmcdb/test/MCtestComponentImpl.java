@@ -33,9 +33,11 @@ public class MCtestComponentImpl extends CharacteristicComponentImpl implements
 		MCtestComponentOperations {
 
 	private ROdouble doubleProp;
+	private ROdoubleImpl doublePropImpl;
 	private RWlong longProp;
 	private RWlongSeq longSeqProp;
 	private ROdoubleSeq doubleSeqProp;
+	private ROdoubleSeqImpl doubleSeqPropImpl;
 	private ROpattern patternProp;
 	
 	@Override
@@ -45,9 +47,9 @@ public class MCtestComponentImpl extends CharacteristicComponentImpl implements
 		
 		{
 			DataAccess<Double> doubleROPropDA = new MCTestDataAccess<Double>(-2.0, 134608945243381570L);
-			ROdoubleImpl currentImpl =  new ROdoubleImpl("doubleProp", this, doubleROPropDA);
-			ROdoublePOATie currentTie = new ROdoublePOATie(currentImpl);
-			doubleProp = ROdoubleHelper.narrow(this.registerProperty(currentImpl, currentTie));
+			doublePropImpl =  new ROdoubleImpl("doubleProp", this, doubleROPropDA);
+			ROdoublePOATie currentTie = new ROdoublePOATie(doublePropImpl);
+			doubleProp = ROdoubleHelper.narrow(this.registerProperty(doublePropImpl, currentTie));
 		}
 		{
 			DataAccess<Long> longROPropDA = new MCTestDataAccess<Long>(15L, 134608945243381570L);
@@ -65,9 +67,9 @@ public class MCtestComponentImpl extends CharacteristicComponentImpl implements
 		{
 			DataAccess<doubleSeqHolder> doubleSeqROPropDA = new MCTestDataAccessSeq<doubleSeqHolder>(
 					new doubleSeqHolder(new double[25]), 134608945243381570L);
-			ROdoubleSeqImpl currentImpl =  new ROdoubleSeqImpl("doubleSeqProp", this, doubleSeqROPropDA);
-			ROdoubleSeqPOATie currentTie = new ROdoubleSeqPOATie(currentImpl);
-			doubleSeqProp = ROdoubleSeqHelper.narrow(this.registerProperty(currentImpl, currentTie));
+			doubleSeqPropImpl =  new ROdoubleSeqImpl("doubleSeqProp", this, doubleSeqROPropDA);
+			ROdoubleSeqPOATie currentTie = new ROdoubleSeqPOATie(doubleSeqPropImpl);
+			doubleSeqProp = ROdoubleSeqHelper.narrow(this.registerProperty(doubleSeqPropImpl, currentTie));
 		}
 		{
 			DataAccess<Long> patternROPropDA = new MCTestDataAccess<Long>(0x23L, 134608945243381570L);
@@ -106,12 +108,12 @@ public class MCtestComponentImpl extends CharacteristicComponentImpl implements
 	@Override
 	public void reset() {
 		try {
-			((ROdoubleImpl)doubleProp).getDataAccess().set(-2.0, null);
+			doublePropImpl.getDataAccess().set(-2.0, null);
 		} catch (AcsJException e) {
 			e.printStackTrace();
 		}
 		try {
-			((ROdoubleSeqImpl) doubleSeqProp).getDataAccess().set(new doubleSeqHolder(new double[25]), null);
+			doubleSeqPropImpl.getDataAccess().set(new doubleSeqHolder(new double[25]), null);
 		} catch (AcsJException e) {
 			e.printStackTrace();
 		}

@@ -40,7 +40,7 @@ mc = simpleClient.getComponent(argv[1])
 try:
     tc =   simpleClient.getComponent('MC_TEST_COMPONENT')
     psns =[propertySerailNumber('doubleSeqProp', ['12124']),propertySerailNumber('doubleProp', ['3432535'])]    
-    mc.registerMonitoredDeviceWithMultipleSerial('MC_TEST_COMPONENT', psns)
+    mc.registerNonCollocatedMonitoredDeviceWithMultipleSerial('MC_TEST_COMPONENT', psns)
     tc.reset();
     mc.startMonitoring('MC_TEST_COMPONENT')    
     time.sleep(22)
