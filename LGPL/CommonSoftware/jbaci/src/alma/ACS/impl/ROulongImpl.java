@@ -34,14 +34,14 @@ import alma.baciErrTypeProperty.DisableAlarmsErrorEx;
  * @author javarias
  *
  */
-public class RoulongImpl extends ROCommonComparablePropertyImpl implements ROuLongOperations {
+public class ROulongImpl extends ROCommonComparablePropertyImpl implements ROuLongOperations {
 
-	public RoulongImpl(String name, CharacteristicComponentImpl parentComponent)
+	public ROulongImpl(String name, CharacteristicComponentImpl parentComponent)
 			throws PropertyInitializationFailed {
 		super(int.class, name, parentComponent);
 	}
 
-	public RoulongImpl(String name, CharacteristicComponentImpl parentComponent,
+	public ROulongImpl(String name, CharacteristicComponentImpl parentComponent,
 			DataAccess<? extends Number> dataAccess) throws PropertyInitializationFailed {
 		super(int.class, name, parentComponent, dataAccess);
 	}
