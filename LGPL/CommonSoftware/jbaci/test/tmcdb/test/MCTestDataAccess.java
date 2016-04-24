@@ -4,6 +4,7 @@ import alma.ACS.jbaci.DataAccess;
 import alma.ACS.jbaci.DataAccessSupport;
 import alma.ACSErr.CompletionHolder;
 import alma.acs.exceptions.AcsJException;
+import alma.acs.time.TimeHelper;
 
 public class MCTestDataAccess<T extends Number> extends DataAccessSupport<T> implements DataAccess<T> {
 
@@ -18,7 +19,7 @@ public class MCTestDataAccess<T extends Number> extends DataAccessSupport<T> imp
 	@SuppressWarnings("unchecked")
 	@Override
 	public T get(CompletionHolder completionHolder) throws AcsJException {
-		timestamp += 1000; //increment 1 seg
+		timestamp += 10000000; //increment 1 seg
 		Double tmp = value.doubleValue() + 1;
 		value = (T)tmp;
 		return value;
@@ -32,7 +33,7 @@ public class MCTestDataAccess<T extends Number> extends DataAccessSupport<T> imp
 	@Override
 	public void set(T value, CompletionHolder completion)
 			throws AcsJException {
-		timestamp = System.currentTimeMillis();
+		timestamp = TimeHelper.getTimeStamp().value;
 		this.value = value;
 	}
 

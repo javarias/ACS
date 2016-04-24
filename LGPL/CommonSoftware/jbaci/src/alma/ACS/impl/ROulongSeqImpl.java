@@ -2,19 +2,20 @@ package alma.ACS.impl;
 
 import org.omg.CORBA.NO_IMPLEMENT;
 
-import alma.ACS.Alarmlong;
+import alma.ACS.AlarmuLong;
 import alma.ACS.CBDescIn;
 import alma.ACS.CBDescOut;
 import alma.ACS.CBlongSeq;
+import alma.ACS.CBuLongSeq;
 import alma.ACS.Callback;
-import alma.ACS.Monitorlong;
-import alma.ACS.MonitorlongHelper;
 import alma.ACS.MonitorlongPOATie;
+import alma.ACS.MonitoruLong;
+import alma.ACS.MonitoruLongHelper;
 import alma.ACS.NoSuchCharacteristic;
-import alma.ACS.ROlongSeqOperations;
+import alma.ACS.ROuLongSeqOperations;
 import alma.ACS.Subscription;
 import alma.ACS.TimeSeqHolder;
-import alma.ACS.longSeqSeqHolder;
+import alma.ACS.uLongSeqSeqHolder;
 import alma.ACS.jbaci.CallbackDispatcher;
 import alma.ACS.jbaci.CompletionUtil;
 import alma.ACS.jbaci.DataAccess;
@@ -25,7 +26,7 @@ import alma.ACSErrTypeCommon.wrappers.AcsJCouldntPerformActionEx;
 import alma.acs.exceptions.AcsJException;
 import alma.baciErrTypeProperty.DisableAlarmsErrorEx;
 
-public class ROulongSeqImpl extends ROCommonComparablePropertyImpl implements ROlongSeqOperations {
+public class ROulongSeqImpl extends ROCommonComparablePropertyImpl implements ROuLongSeqOperations {
 
 	
 	
@@ -83,29 +84,29 @@ public class ROulongSeqImpl extends ROCommonComparablePropertyImpl implements RO
 	}
 
 	@Override
-	public void get_async(CBlongSeq cb, CBDescIn desc) {
+	public void get_async(CBuLongSeq cb, CBDescIn desc) {
 		getAsync(cb, desc);
 	}
 
 	@Override
-	public int get_history(int n_last_values, longSeqSeqHolder vs, TimeSeqHolder ts) {
+	public int get_history(int n_last_values, uLongSeqSeqHolder vs, TimeSeqHolder ts) {
 		vs.value = (int[][])getHistory(n_last_values, ts);
 		return vs.value.length;
 	}
 
 	@Override
-	public Monitorlong create_monitor(CBlongSeq cb, CBDescIn desc) {
+	public MonitoruLong create_monitor(CBuLongSeq cb, CBDescIn desc) {
 		return create_postponed_monitor(0, cb, desc);
 	}
 
 	@Override
-	public Monitorlong create_postponed_monitor(long start_time, CBlongSeq cb, CBDescIn desc) {
+	public MonitoruLong create_postponed_monitor(long start_time, CBuLongSeq cb, CBDescIn desc) {
 		// create monitor and its servant
 		MonitorlongImpl monitorImpl = new MonitorlongImpl(this, cb, desc, start_time);
 		MonitorlongPOATie monitorTie = new MonitorlongPOATie(monitorImpl);
 
 		// register and activate
-		return MonitorlongHelper.narrow(this.registerMonitor(monitorImpl, monitorTie));
+		return MonitoruLongHelper.narrow(this.registerMonitor(monitorImpl, monitorTie));
 	}
 
 	@Override
@@ -148,7 +149,7 @@ public class ROulongSeqImpl extends ROCommonComparablePropertyImpl implements RO
 	}
 
 	@Override
-	public Subscription new_subscription_Alarm(Alarmlong cb, CBDescIn desc) {
+	public Subscription new_subscription_Alarm(AlarmuLong cb, CBDescIn desc) {
 		// TODO NO_IMPLEMENT
 		throw new NO_IMPLEMENT();
 	}
