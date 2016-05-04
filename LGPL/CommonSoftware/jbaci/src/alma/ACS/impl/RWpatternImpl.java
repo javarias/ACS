@@ -21,17 +21,29 @@
 
 package alma.ACS.impl;
 
+import org.omg.CORBA.Context;
+import org.omg.CORBA.ContextList;
+import org.omg.CORBA.DomainManager;
+import org.omg.CORBA.ExceptionList;
 import org.omg.CORBA.NO_RESOURCES;
+import org.omg.CORBA.NVList;
+import org.omg.CORBA.NamedValue;
+import org.omg.CORBA.Policy;
+import org.omg.CORBA.Request;
+import org.omg.CORBA.SetOverrideType;
+
 import alma.ACS.CBDescIn;
 import alma.ACS.CBDescOut;
 import alma.ACS.CBpattern;
+import alma.ACS.CBvoid;
 import alma.ACS.Callback;
 import alma.ACS.Condition;
 import alma.ACS.Monitorpattern;
 import alma.ACS.MonitorpatternHelper;
 import alma.ACS.MonitorpatternPOATie;
 import alma.ACS.NoSuchCharacteristic;
-import alma.ACS.PpatternOperations;
+import alma.ACS.RWpatternOperations;
+import alma.ACS.RWpattern;
 import alma.ACS.TimeSeqHolder;
 import alma.ACS.patternSeqHolder;
 import alma.ACS.jbaci.CallbackDispatcher;
@@ -51,7 +63,7 @@ import alma.acs.exceptions.AcsJException;
  */
 public class RWpatternImpl
 	extends RWCommonComparablePropertyImpl
-	implements PpatternOperations {
+	implements RWpattern {
 
 	/**
 	 * @param propertyType
@@ -90,14 +102,14 @@ public class RWpatternImpl
 	}
 
 	/**
-	 * @see alma.ACS.PpatternOperations#default_value()
+	 * @see alma.ACS.RWPatternOperations#default_value()
 	 */
 	public long default_value() {
 		return ((Long)defaultValue).longValue();
 	}
 
 	/**
-	 * @see alma.ACS.PpatternOperations#bitDescription()
+	 * @see alma.ACS.RWPatternOperations#bitDescription()
 	*/ 
 	public String[] bitDescription() {
 		try
@@ -111,7 +123,7 @@ public class RWpatternImpl
 	}
 
 	/**
-	 * @see alma.ACS.PpatternOperations#whenSet()
+	 * @see alma.ACS.RWPatternOperations#whenSet()
 	 */
 	public Condition[] whenSet() {
 		try
@@ -129,7 +141,7 @@ public class RWpatternImpl
 	}
 
 	/**
-	 * @see alma.ACS.PpatternOperations#whenCleared()
+	 * @see alma.ACS.RWPatternOperations#whenCleared()
 	 */
 	public Condition[] whenCleared() {
 		try
@@ -169,7 +181,7 @@ public class RWpatternImpl
 	}
 
 	/**
-	 * @see alma.ACS.PpatternOperations#get_sync(alma.ACSErr.CompletionHolder)
+	 * @see alma.ACS.RWPatternOperations#get_sync(alma.ACSErr.CompletionHolder)
 	 */
 	public long get_sync(CompletionHolder completionHolder) {
 		try
@@ -187,14 +199,14 @@ public class RWpatternImpl
 	}
 
 	/**
-	 * @see alma.ACS.PpatternOperations#get_async(alma.ACS.CBpattern, alma.ACS.CBDescIn)
+	 * @see alma.ACS.RWPatternOperations#get_async(alma.ACS.CBpattern, alma.ACS.CBDescIn)
 	 */
 	public void get_async(CBpattern callback, CBDescIn descIn) {
 		getAsync(callback, descIn);
 	}
 
 	/**
-	 * @see alma.ACS.PpatternOperations#get_history(int, alma.ACS.patternSeqHolder, alma.ACS.TimeSeqHolder)
+	 * @see alma.ACS.RWPatternOperations#get_history(int, alma.ACS.patternSeqHolder, alma.ACS.TimeSeqHolder)
 	 */
 	public int get_history(
 		int arg0,
@@ -205,14 +217,14 @@ public class RWpatternImpl
 	}
 
 	/**
-	 * @see alma.ACS.PpatternOperations#create_monitor(alma.ACS.CBpattern, alma.ACS.CBDescIn)
+	 * @see alma.ACS.RWPatternOperations#create_monitor(alma.ACS.CBpattern, alma.ACS.CBDescIn)
 	 */
 	public Monitorpattern create_monitor(CBpattern callback, CBDescIn descIn) {
 		return create_postponed_monitor(0, callback, descIn);
 	}
 
 	/**
-	 * @see alma.ACS.PpatternOperations#create_postponed_monitor(long, alma.ACS.CBpattern, alma.ACS.CBDescIn)
+	 * @see alma.ACS.RWPatternOperations#create_postponed_monitor(long, alma.ACS.CBpattern, alma.ACS.CBDescIn)
 	 */
 	public Monitorpattern create_postponed_monitor(
 		long startTime,
@@ -276,6 +288,102 @@ public class RWpatternImpl
 		if (substract)
 			val2 = -val2;
 		return new Double(((Integer)value1).intValue() + val2);
+	}
+
+	@Override
+	public Completion set_sync(long value) {
+		// TODO Auto-generated method stub
+		return null;
+	}
+
+	@Override
+	public void set_async(long value, CBvoid cb, CBDescIn desc) {
+		// TODO Auto-generated method stub
+		
+	}
+
+	@Override
+	public void set_nonblocking(long value) {
+		setNonblocking(value);
+	}
+
+	@Override
+	public boolean _is_a(String repositoryIdentifier) {
+		// TODO Auto-generated method stub
+		return false;
+	}
+
+	@Override
+	public boolean _is_equivalent(org.omg.CORBA.Object other) {
+		// TODO Auto-generated method stub
+		return false;
+	}
+
+	@Override
+	public boolean _non_existent() {
+		// TODO Auto-generated method stub
+		return false;
+	}
+
+	@Override
+	public int _hash(int maximum) {
+		// TODO Auto-generated method stub
+		return 0;
+	}
+
+	@Override
+	public org.omg.CORBA.Object _duplicate() {
+		// TODO Auto-generated method stub
+		return null;
+	}
+
+	@Override
+	public void _release() {
+		// TODO Auto-generated method stub
+		
+	}
+
+	@Override
+	public org.omg.CORBA.Object _get_interface_def() {
+		// TODO Auto-generated method stub
+		return null;
+	}
+
+	@Override
+	public Request _request(String operation) {
+		// TODO Auto-generated method stub
+		return null;
+	}
+
+	@Override
+	public Request _create_request(Context ctx, String operation, NVList arg_list, NamedValue result) {
+		// TODO Auto-generated method stub
+		return null;
+	}
+
+	@Override
+	public Request _create_request(Context ctx, String operation, NVList arg_list, NamedValue result,
+			ExceptionList exclist, ContextList ctxlist) {
+		// TODO Auto-generated method stub
+		return null;
+	}
+
+	@Override
+	public Policy _get_policy(int policy_type) {
+		// TODO Auto-generated method stub
+		return null;
+	}
+
+	@Override
+	public DomainManager[] _get_domain_managers() {
+		// TODO Auto-generated method stub
+		return null;
+	}
+
+	@Override
+	public org.omg.CORBA.Object _set_policy_override(Policy[] policies, SetOverrideType set_add) {
+		// TODO Auto-generated method stub
+		return null;
 	}
 }
 
