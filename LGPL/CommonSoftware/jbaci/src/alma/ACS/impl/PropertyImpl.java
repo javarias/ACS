@@ -39,7 +39,7 @@ import alma.JavaContainerError.wrappers.AcsJContainerServicesEx;
  * @author <a href="mailto:cmenayATcsrg.inf.utfsm.cl">Camilo Menay</a>
  * @version $id$
  */
-public class PropertyImpl implements PropertyOperations, PropertyReferenceHolder, Destroyable {
+public class PropertyImpl implements PropertyOperations, PropertyReferenceHolder, Destroyable, PropertyIF {
 
 	/**
 	 * Property name.
@@ -174,10 +174,10 @@ public class PropertyImpl implements PropertyOperations, PropertyReferenceHolder
 	/*********************** [ Helper ] ***********************/
 	/**********************************************************/
 	
-	/**
-	 * Get property descriptor.
-	 * @see alma.ACS.PropertyDesc
+	/* (non-Javadoc)
+	 * @see alma.ACS.impl.PropertyIF#getPropertyDescriptor()
 	 */
+	@Override
 	public synchronized PropertyDesc getPropertyDescriptor()
 	{
 		if (propertyDesc == null)
