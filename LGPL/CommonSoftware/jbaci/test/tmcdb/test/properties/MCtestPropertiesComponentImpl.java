@@ -46,6 +46,8 @@ import alma.ACS.RWboolean;
 import alma.ACS.RWbooleanHelper;
 import alma.ACS.RWbooleanPOATie;
 import alma.ACS.RWbooleanSeq;
+import alma.ACS.RWbooleanSeqHelper;
+import alma.ACS.RWbooleanSeqPOATie;
 import alma.ACS.RWdouble;
 import alma.ACS.RWdoubleHelper;
 import alma.ACS.RWdoublePOATie;
@@ -74,10 +76,14 @@ import alma.ACS.RWstring;
 import alma.ACS.RWstringHelper;
 import alma.ACS.RWstringPOATie;
 import alma.ACS.RWuLong;
+import alma.ACS.RWuLongHelper;
 import alma.ACS.RWuLongLong;
 import alma.ACS.RWuLongLongHelper;
 import alma.ACS.RWuLongLongPOATie;
+import alma.ACS.RWuLongPOATie;
 import alma.ACS.RWuLongSeq;
+import alma.ACS.RWuLongSeqHelper;
+import alma.ACS.RWuLongSeqPOATie;
 import alma.ACS.impl.CharacteristicComponentImpl;
 import alma.ACS.impl.CommonROEnumPropertyImpl;
 import alma.ACS.impl.CommonRWEnumPropertyImpl;
@@ -96,6 +102,7 @@ import alma.ACS.impl.ROuLongLongImpl;
 import alma.ACS.impl.ROulongImpl;
 import alma.ACS.impl.ROulongSeqImpl;
 import alma.ACS.impl.RWbooleanImpl;
+import alma.ACS.impl.RWbooleanSeqImpl;
 import alma.ACS.impl.RWdoubleImpl;
 import alma.ACS.impl.RWdoubleSeqImpl;
 import alma.ACS.impl.RWfloatImpl;
@@ -105,7 +112,9 @@ import alma.ACS.impl.RWlongLongImpl;
 import alma.ACS.impl.RWlongSeqImpl;
 import alma.ACS.impl.RWpatternImpl;
 import alma.ACS.impl.RWstringImpl;
+import alma.ACS.impl.RWuLongImpl;
 import alma.ACS.impl.RWuLongLongImpl;
+import alma.ACS.impl.RWuLongSeqImpl;
 import alma.ACS.jbaci.DataAccess;
 import alma.TMCDB.EnumTest;
 import alma.TMCDB.MCtestPropertiesComponentOperations;
@@ -275,10 +284,6 @@ public class MCtestPropertiesComponentImpl extends CharacteristicComponentImpl
 	private long m_time30 = 134608945243381570L;
 	private DataAccess<EnumTest> m_EnumTestRWDevIO = new MCtestDevIONoIncremental<EnumTest>(m_time30, m_EnumTestRWVal);
 	
-	public MCtestPropertiesComponentImpl() {
-		
-	}
-	
 	@Override
 	public void initialize(ContainerServices containerServices) throws ComponentLifecycleException {
 		super.initialize(containerServices);
@@ -298,7 +303,7 @@ public class MCtestPropertiesComponentImpl extends CharacteristicComponentImpl
 			m_longROProp_p = ROlongHelper.narrow(registerProperty(impl, tie));
 		}
 		{
-			ROulongImpl impl = new ROulongImpl("ulongROProp", this, m_uLongRODevIO);
+			ROulongImpl impl = new ROulongImpl("uLongROProp", this, m_uLongRODevIO);
 			ROuLongPOATie tie = new ROuLongPOATie(impl);
 			m_uLongROProp_p = ROuLongHelper.narrow(registerProperty(impl, tie));
 		}
@@ -308,7 +313,7 @@ public class MCtestPropertiesComponentImpl extends CharacteristicComponentImpl
 			m_booleanROProp_p = RObooleanHelper.narrow(registerProperty(impl, tie));
 		}
 		{
-			ROpatternImpl impl = new ROpatternImpl("patterROProp", this, m_patternRODevIO);
+			ROpatternImpl impl = new ROpatternImpl("patternROProp", this, m_patternRODevIO);
 			ROpatternPOATie tie = new ROpatternPOATie(impl);
 			m_patternROProp_p = ROpatternHelper.narrow(registerProperty(impl, tie));
 		}
@@ -318,12 +323,12 @@ public class MCtestPropertiesComponentImpl extends CharacteristicComponentImpl
 			m_stringROProp_p = ROstringHelper.narrow(registerProperty(impl, tie));
 		}
 		{
-			ROlongLongImpl impl = new ROlongLongImpl("longlongROProp", this, m_longLongRODevIO);
+			ROlongLongImpl impl = new ROlongLongImpl("longLongROProp", this, m_longLongRODevIO);
 			ROlongLongPOATie tie = new ROlongLongPOATie(impl);
 			m_longLongROProp_p = ROlongLongHelper.narrow(registerProperty(impl, tie));
 		}
 		{
-			ROuLongLongImpl impl = new ROuLongLongImpl("ulonglongROProp", this, m_ulongLongRODevIO);
+			ROuLongLongImpl impl = new ROuLongLongImpl("uLongLongROProp", this, m_ulongLongRODevIO);
 			ROuLongLongPOATie tie = new ROuLongLongPOATie(impl);
 			m_uLongLongROProp_p = ROuLongLongHelper.narrow(registerProperty(impl, tie));
 		}
@@ -348,7 +353,7 @@ public class MCtestPropertiesComponentImpl extends CharacteristicComponentImpl
 			m_longSeqROProp_p = ROlongSeqHelper.narrow(registerProperty(impl, tie));
 		}
 		{
-			ROulongSeqImpl impl = new ROulongSeqImpl("ulongSeqROProp", this, m_ulongSeqRODevIO);
+			ROulongSeqImpl impl = new ROulongSeqImpl("uLongSeqROProp", this, m_ulongSeqRODevIO);
 			ROuLongSeqPOATie tie = new ROuLongSeqPOATie(impl);
 			m_uLongSeqROProp_p = ROuLongSeqHelper.narrow(registerProperty(impl, tie));
 		}
@@ -384,19 +389,18 @@ public class MCtestPropertiesComponentImpl extends CharacteristicComponentImpl
 			RWlongPOATie tie = new RWlongPOATie(impl);
 			m_longRWProp_p = RWlongHelper.narrow(registerProperty(impl, tie));
 		}
-//		TODO: implement RWulongImpl
-//		{
-//			RWulongImpl impl = new RWulongImpl("ulongRWProp", this, m_uLongRWDevIO);
-//			RWuLongPOATie tie = new RWuLongPOATie(impl);
-//			m_uLongRWProp_p = RWuLongHelper.narrow(registerProperty(impl, tie));
-//		}
+		{
+			RWuLongImpl impl = new RWuLongImpl("uLongRWProp", this, m_uLongRWDevIO);
+			RWuLongPOATie tie = new RWuLongPOATie(impl);
+			m_uLongRWProp_p = RWuLongHelper.narrow(registerProperty(impl, tie));
+		}
 		{
 			RWbooleanImpl impl = new RWbooleanImpl("booleanRWProp", this, m_booleanRWDevIO);
 			RWbooleanPOATie tie = new RWbooleanPOATie(impl);
 			m_booleanRWProp_p = RWbooleanHelper.narrow(registerProperty(impl, tie));
 		}
 		{
-			RWpatternImpl impl = new RWpatternImpl("patterRWProp", this, m_patternRWDevIO);
+			RWpatternImpl impl = new RWpatternImpl("patternRWProp", this, m_patternRWDevIO);
 			RWpatternPOATie tie = new RWpatternPOATie(impl);
 			m_patternRWProp_p = RWpatternHelper.narrow(registerProperty(impl, tie));
 		}
@@ -406,12 +410,12 @@ public class MCtestPropertiesComponentImpl extends CharacteristicComponentImpl
 			m_stringRWProp_p = RWstringHelper.narrow(registerProperty(impl, tie));
 		}
 		{
-			RWlongLongImpl impl = new RWlongLongImpl("longlongRWProp", this, m_longLongRWDevIO);
+			RWlongLongImpl impl = new RWlongLongImpl("longLongRWProp", this, m_longLongRWDevIO);
 			RWlongLongPOATie tie = new RWlongLongPOATie(impl);
 			m_longLongRWProp_p = RWlongLongHelper.narrow(registerProperty(impl, tie));
 		}
 		{
-			RWuLongLongImpl impl = new RWuLongLongImpl("ulonglongRWProp", this, m_uLongLongRWDevIO);
+			RWuLongLongImpl impl = new RWuLongLongImpl("uLongLongRWProp", this, m_uLongLongRWDevIO);
 			RWuLongLongPOATie tie = new RWuLongLongPOATie(impl);
 			m_uLongLongRWProp_p = RWuLongLongHelper.narrow(registerProperty(impl, tie));
 		}
@@ -435,18 +439,16 @@ public class MCtestPropertiesComponentImpl extends CharacteristicComponentImpl
 			RWlongSeqPOATie tie = new RWlongSeqPOATie(impl);
 			m_longSeqRWProp_p = RWlongSeqHelper.narrow(registerProperty(impl, tie));
 		}
-//		TODO: Implement RWulongSeqImpl
-//		{
-//			RWulongSeqImpl impl = new RWulongSeqImpl("ulongSeqRWProp", this, m_ulongSeqRWDevIO);
-//			RWuLongSeqPOATie tie = new RWuLongSeqPOATie(impl);
-//			m_uLongSeqRWProp_p = RWuLongSeqHelper.narrow(registerProperty(impl, tie));
-//		}
-//		TODO: Implement RWbooleanSeqImpl
-//		{
-//			RWbooleanSeqImpl impl = new RWbooleanSeqImpl("booleanSeqRWProp", this, m_booleanSeqRWDevIO);
-//			RWbooleanSeqPOATie tie = new RWbooleanSeqPOATie(impl);
-//			m_booleanSeqRWProp_p = RWbooleanSeqHelper.narrow(registerProperty(impl, tie));
-//		}
+		{
+			RWuLongSeqImpl impl = new RWuLongSeqImpl("uLongSeqRWProp", this, m_uLongSeqRWDevIO);
+			RWuLongSeqPOATie tie = new RWuLongSeqPOATie(impl);
+			m_uLongSeqRWProp_p = RWuLongSeqHelper.narrow(registerProperty(impl, tie));
+		}
+		{
+			RWbooleanSeqImpl impl = new RWbooleanSeqImpl("booleanSeqRWProp", this, m_booleanSeqRWDevIO);
+			RWbooleanSeqPOATie tie = new RWbooleanSeqPOATie(impl);
+			m_booleanSeqRWProp_p = RWbooleanSeqHelper.narrow(registerProperty(impl, tie));
+		}
 		{
 			RWEnumTestOperations impl = 
 					(RWEnumTestOperations) CommonRWEnumPropertyImpl.createEnumProperty(

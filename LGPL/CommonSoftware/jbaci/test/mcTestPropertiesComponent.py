@@ -71,7 +71,7 @@ try:
            propertySerailNumber('booleanSeqRWProp',['29']),
            propertySerailNumber('EnumTestRWProp',  ['30'])
         ]
-    mc.registerMonitoredDeviceWithMultipleSerial('MC_TEST_PROPERTIES_COMPONENT', psns)
+    mc.registerNonCollocatedMonitoredDeviceWithMultipleSerial('MC_TEST_PROPERTIES_COMPONENT', psns)
     mc.startMonitoring('MC_TEST_PROPERTIES_COMPONENT')    
     time.sleep(3)
     mc.stopMonitoring('MC_TEST_PROPERTIES_COMPONENT')
