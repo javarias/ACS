@@ -343,7 +343,7 @@ public abstract class CommonPropertyImpl
 				     Array.setDouble(historyValue, historyPosition, ((Double)value).doubleValue());
 					
 				else if (propertyType.isAssignableFrom(int.class))
-					Array.setInt(historyValue, historyPosition, ((Integer)value).intValue());
+					Array.setInt(historyValue, historyPosition, ((Double)value).intValue());
 					
 				else if (propertyType.isAssignableFrom(long.class))
 					Array.setLong(historyValue, historyPosition, ((Long)value).longValue());

@@ -301,6 +301,8 @@ public class CharacteristicModelImpl implements CharacteristicModelOperations {
 		}
 		catch (Throwable th)
 		{
+			System.out.println("CDB field: " + prefix + name);
+			th.printStackTrace();
 			throw new NoSuchCharacteristic(name, modelName);
 		}
 	}
@@ -462,7 +464,10 @@ public class CharacteristicModelImpl implements CharacteristicModelOperations {
 		}
 		catch (Throwable th)
 		{
+			System.out.println("CDB field: " + prefix + name);
+			th.printStackTrace();
 			throw new NoSuchCharacteristic(name, modelName);
 		}
 	}
+	
 }

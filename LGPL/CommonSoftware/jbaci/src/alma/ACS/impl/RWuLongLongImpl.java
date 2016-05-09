@@ -1,5 +1,7 @@
 package alma.ACS.impl;
 
+import java.math.BigInteger;
+
 import alma.ACS.CBDescIn;
 import alma.ACS.CBDescOut;
 import alma.ACS.CBuLongLong;
@@ -80,7 +82,15 @@ public class RWuLongLongImpl
 	 */
 	public Object readPropertyTypeCharacteristic(String name)
 			throws NoSuchCharacteristic {
-		return new Long(characteristicModelImpl.getLong(name));
+		try {
+			return new Long(characteristicModelImpl.getString(name));
+		} catch (NumberFormatException ex) {
+			BigInteger value = new BigInteger(characteristicModelImpl.getString(name));
+			if (value.signum() > 0)
+				return Long.MAX_VALUE;
+			else
+				return Long.MIN_VALUE;
+		}
 
 	}
 

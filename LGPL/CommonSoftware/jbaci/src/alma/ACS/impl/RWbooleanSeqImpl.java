@@ -1,18 +1,16 @@
 package alma.ACS.impl;
 
-import org.omg.CORBA.NO_IMPLEMENT;
-
-import alma.ACS.Alarmboolean;
 import alma.ACS.CBDescIn;
 import alma.ACS.CBDescOut;
+import alma.ACS.CBboolean;
 import alma.ACS.CBbooleanSeq;
+import alma.ACS.CBvoid;
 import alma.ACS.Callback;
 import alma.ACS.Monitorboolean;
 import alma.ACS.MonitorbooleanHelper;
 import alma.ACS.MonitorbooleanPOATie;
 import alma.ACS.NoSuchCharacteristic;
-import alma.ACS.RObooleanSeqOperations;
-import alma.ACS.Subscription;
+import alma.ACS.RWbooleanSeqOperations;
 import alma.ACS.TimeSeqHolder;
 import alma.ACS.booleanSeqSeqHolder;
 import alma.ACS.jbaci.CallbackDispatcher;
@@ -23,46 +21,44 @@ import alma.ACSErr.Completion;
 import alma.ACSErr.CompletionHolder;
 import alma.ACSErrTypeCommon.wrappers.AcsJCouldntPerformActionEx;
 import alma.acs.exceptions.AcsJException;
-import alma.baciErrTypeProperty.DisableAlarmsErrorEx;
+
 
 /**
- * 
  * 
  * @author javarias
  *
  */
-public class RObooleanSeqImpl extends CommonComparablePropertyImpl implements RObooleanSeqOperations {
+public class RWbooleanSeqImpl extends RWCommonComparablePropertyImpl implements RWbooleanSeqOperations {
 
-	public RObooleanSeqImpl(String name, CharacteristicComponentImpl parentComponent,
+	public RWbooleanSeqImpl(String name, CharacteristicComponentImpl parentComponent,
 			DataAccess<?> dataAccess) throws PropertyInitializationFailed {
 		super(boolean[].class, name, parentComponent, dataAccess);
 	}
 
-	public RObooleanSeqImpl(String name, CharacteristicComponentImpl parentComponent)
+	public RWbooleanSeqImpl(String name, CharacteristicComponentImpl parentComponent)
 			throws PropertyInitializationFailed {
 		super(boolean[].class, name, parentComponent);
 	}
 
 	@Override
 	public boolean default_value() {
-		return ((boolean[])defaultValue)[0];
+		return ((Boolean)defaultValue).booleanValue();
 	}
 
 	@Override
-	public boolean[] get_sync(CompletionHolder completionHolder) {
+	public boolean[] get_sync(CompletionHolder c) {
 		try
 		{
-			return (boolean[])getSync(completionHolder);
+			return ((boolean[])getSync(c));
 		}
 		catch (AcsJException acsex)
 		{
 			AcsJCouldntPerformActionEx cpa =
 				new AcsJCouldntPerformActionEx(acsex);
+			c.value = CompletionUtil.generateCompletion(cpa);
 			cpa.setProperty("message", "Failed to retrieve value");
-			completionHolder.value = CompletionUtil.generateCompletion(cpa);
 			// return default value in case of error
-			//return default_value();
-			return new boolean[1];
+			return new boolean[]{default_value()};
 		}
 	}
 
@@ -84,14 +80,13 @@ public class RObooleanSeqImpl extends CommonComparablePropertyImpl implements RO
 
 	@Override
 	public Monitorboolean create_postponed_monitor(long start_time, CBbooleanSeq cb, CBDescIn desc) {
-		
-	// create monitor and its servant
-	MonitorbooleanImpl monitorImpl = new MonitorbooleanImpl(this, cb, desc, start_time);
-	MonitorbooleanPOATie monitorTie = new MonitorbooleanPOATie(monitorImpl);
+		// create monitor and its servant
+		MonitorbooleanImpl monitorImpl = new MonitorbooleanImpl(this, cb, desc, start_time);
+		MonitorbooleanPOATie monitorTie = new MonitorbooleanPOATie(monitorImpl);
 
-	// register and activate		
-	return MonitorbooleanHelper.narrow(this.registerMonitor(monitorImpl, monitorTie));
-
+		// register and activate		
+		return MonitorbooleanHelper.narrow(this.registerMonitor(monitorImpl, monitorTie));
+	
 	}
 
 	@Override
@@ -99,42 +94,52 @@ public class RObooleanSeqImpl extends CommonComparablePropertyImpl implements RO
 		try
 		{	
 			if (type == CallbackDispatcher.DONE_TYPE)
-				((CBbooleanSeq)callback).done(((boolean[])value), completion, desc);
+				((CBboolean)callback).done((boolean) ((Boolean)value).booleanValue(), completion, desc);
 			else if (type == CallbackDispatcher.WORKING_TYPE)
-				((CBbooleanSeq)callback).working(((boolean[])value), completion, desc);
+				((CBboolean)callback).working((boolean) ((Boolean)value).booleanValue(), completion, desc);
 			else 
 				return false;
 				
 			return true;
 		}
-		catch (Throwable th)
+		catch (Exception th)
 		{
 			return false;
 		}
 	}
 
 	@Override
-	public Subscription new_subscription_Alarm(Alarmboolean cb, CBDescIn desc) {
-		// TODO NO_IMPLEMENT
-		throw new NO_IMPLEMENT();
+	public boolean min_value() {
+		return ((Boolean)min_value());
 	}
 
 	@Override
-	public void enable_alarm_system() {
-		// TODO NO_IMPLEMENT
-		throw new NO_IMPLEMENT();
+	public boolean max_value() {
+		return ((Boolean)maxValue).booleanValue();
 	}
 
 	@Override
-	public void disable_alarm_system() throws DisableAlarmsErrorEx {
-		// TODO NO_IMPLEMENT
-		throw new NO_IMPLEMENT();
+	public Completion set_sync(boolean[] value) {
+		try
+		{
+			return setSync(value);
+		}
+		catch (AcsJException acsex)
+		{
+			AcsJCouldntPerformActionEx cpa =
+				new AcsJCouldntPerformActionEx("Failed to set value", acsex);
+			return CompletionUtil.generateCompletion(cpa);
+		}
 	}
 
 	@Override
-	public boolean alarm_system_enabled() {
-		// TODO NO_IMPLEMENT
-		throw new NO_IMPLEMENT();
+	public void set_async(boolean[] value, CBvoid cb, CBDescIn desc) {
+		setAsync(value, cb, desc);
+	}
+
+	@Override
+	public void set_nonblocking(boolean[] value) {
+		setNonblocking(value);
 	}
 
 	@Override
@@ -144,7 +149,7 @@ public class RObooleanSeqImpl extends CommonComparablePropertyImpl implements RO
 
 	@Override
 	public boolean noDelta(Object value) {
-		return ((Integer)value).intValue() == 0;
+		return ((Boolean)value) == false;
 	}
 
 	@Override
@@ -157,7 +162,7 @@ public class RObooleanSeqImpl extends CommonComparablePropertyImpl implements RO
 
 	@Override
 	public Object readPropertyTypeCharacteristic(String name) throws NoSuchCharacteristic {
-		return characteristicModelImpl.getStringSeq(name);
+		return (Boolean)(characteristicModelImpl.getBoolean(name));
 	}
 
 }

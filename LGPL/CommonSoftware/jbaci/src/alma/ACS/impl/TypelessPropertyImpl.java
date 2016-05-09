@@ -86,8 +86,9 @@ public class TypelessPropertyImpl
 			characteristic = "resolution";
 			resolution = characteristicModelImpl.getLong(characteristic);
 		}
-		catch (Throwable t)
+		catch (Exception t)
 		{
+			t.printStackTrace();
 			throw new PropertyInitializationFailed("Failed to read property characteristic '" + characteristic + "'", t);
 		}
 	}

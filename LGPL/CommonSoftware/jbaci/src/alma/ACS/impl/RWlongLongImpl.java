@@ -83,7 +83,7 @@ public class RWlongLongImpl
 	 */
 	public Object readPropertyTypeCharacteristic(String name)
 		throws NoSuchCharacteristic {
-		return new Long(characteristicModelImpl.getLong(name));
+		return new Long(characteristicModelImpl.getString(name));
 	}
 
 	/**

@@ -62,8 +62,8 @@ import alma.acs.exceptions.AcsJException;
  * @version $id$f
  */
 public class RWpatternImpl
-	extends RWCommonComparablePropertyImpl
-	implements RWpattern {
+	extends CommonPropertyImpl
+	implements RWpatternOperations {
 
 	/**
 	 * @param propertyType
@@ -305,85 +305,6 @@ public class RWpatternImpl
 	@Override
 	public void set_nonblocking(long value) {
 		setNonblocking(value);
-	}
-
-	@Override
-	public boolean _is_a(String repositoryIdentifier) {
-		// TODO Auto-generated method stub
-		return false;
-	}
-
-	@Override
-	public boolean _is_equivalent(org.omg.CORBA.Object other) {
-		// TODO Auto-generated method stub
-		return false;
-	}
-
-	@Override
-	public boolean _non_existent() {
-		// TODO Auto-generated method stub
-		return false;
-	}
-
-	@Override
-	public int _hash(int maximum) {
-		// TODO Auto-generated method stub
-		return 0;
-	}
-
-	@Override
-	public org.omg.CORBA.Object _duplicate() {
-		// TODO Auto-generated method stub
-		return null;
-	}
-
-	@Override
-	public void _release() {
-		// TODO Auto-generated method stub
-		
-	}
-
-	@Override
-	public org.omg.CORBA.Object _get_interface_def() {
-		// TODO Auto-generated method stub
-		return null;
-	}
-
-	@Override
-	public Request _request(String operation) {
-		// TODO Auto-generated method stub
-		return null;
-	}
-
-	@Override
-	public Request _create_request(Context ctx, String operation, NVList arg_list, NamedValue result) {
-		// TODO Auto-generated method stub
-		return null;
-	}
-
-	@Override
-	public Request _create_request(Context ctx, String operation, NVList arg_list, NamedValue result,
-			ExceptionList exclist, ContextList ctxlist) {
-		// TODO Auto-generated method stub
-		return null;
-	}
-
-	@Override
-	public Policy _get_policy(int policy_type) {
-		// TODO Auto-generated method stub
-		return null;
-	}
-
-	@Override
-	public DomainManager[] _get_domain_managers() {
-		// TODO Auto-generated method stub
-		return null;
-	}
-
-	@Override
-	public org.omg.CORBA.Object _set_policy_override(Policy[] policies, SetOverrideType set_add) {
-		// TODO Auto-generated method stub
-		return null;
 	}
 }
 
