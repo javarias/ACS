@@ -162,7 +162,7 @@ public class RWbooleanSeqImpl extends RWCommonComparablePropertyImpl implements 
 
 	@Override
 	public Object readPropertyTypeCharacteristic(String name) throws NoSuchCharacteristic {
-		return (Boolean)(characteristicModelImpl.getBoolean(name));
+		return (characteristicModelImpl.getBooleanSeq(name));
 	}
 
 }

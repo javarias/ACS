@@ -239,7 +239,7 @@ public class RWbooleanImpl
 	}
 	
 	public boolean noDelta(Object value) {
-		throw new NO_IMPLEMENT();
+		return ((Boolean)value) == false;
 	}
 	
 	public boolean lessThanDelta(Object value1, Object value2, Object delta) {

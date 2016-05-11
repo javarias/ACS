@@ -9,6 +9,7 @@ import alma.ACS.Callback;
 import alma.ACS.MonitorlongPOATie;
 import alma.ACS.MonitoruLong;
 import alma.ACS.MonitoruLongHelper;
+import alma.ACS.MonitoruLongPOATie;
 import alma.ACS.NoSuchCharacteristic;
 import alma.ACS.RWuLongSeqOperations;
 import alma.ACS.TimeSeqHolder;
@@ -42,7 +43,7 @@ public class RWuLongSeqImpl extends RWCommonComparablePropertyImpl implements RW
 	@Override
 	public Object readPropertyTypeCharacteristic(String name)
 		throws NoSuchCharacteristic {
-		return characteristicModelImpl.getStringSeq(name);
+		return characteristicModelImpl.getuLongSeq(name);
 	}
 
 	/**
@@ -63,8 +64,8 @@ public class RWuLongSeqImpl extends RWCommonComparablePropertyImpl implements RW
 		CBDescIn descIn) {
 			
 		// create monitor and its servant
-		MonitorlongImpl monitorImpl = new MonitorlongImpl(this, callback, descIn, startTime);
-		MonitorlongPOATie monitorTie = new MonitorlongPOATie(monitorImpl);
+		MonitoruLongImpl monitorImpl = new MonitoruLongImpl(this, callback, descIn, startTime);
+		MonitoruLongPOATie monitorTie = new MonitoruLongPOATie(monitorImpl);
 
 		// register and activate		
 		return MonitoruLongHelper.narrow(this.registerMonitor(monitorImpl, monitorTie));

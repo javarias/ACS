@@ -11,6 +11,7 @@ import alma.ACS.Callback;
 import alma.ACS.MonitorlongPOATie;
 import alma.ACS.MonitoruLong;
 import alma.ACS.MonitoruLongHelper;
+import alma.ACS.MonitoruLongPOATie;
 import alma.ACS.NoSuchCharacteristic;
 import alma.ACS.ROuLongSeqOperations;
 import alma.ACS.Subscription;
@@ -102,8 +103,8 @@ public class ROulongSeqImpl extends ROCommonComparablePropertyImpl implements RO
 	@Override
 	public MonitoruLong create_postponed_monitor(long start_time, CBuLongSeq cb, CBDescIn desc) {
 		// create monitor and its servant
-		MonitorlongImpl monitorImpl = new MonitorlongImpl(this, cb, desc, start_time);
-		MonitorlongPOATie monitorTie = new MonitorlongPOATie(monitorImpl);
+		MonitoruLongImpl monitorImpl = new MonitoruLongImpl(this, cb, desc, start_time);
+		MonitoruLongPOATie monitorTie = new MonitoruLongPOATie(monitorImpl);
 
 		// register and activate
 		return MonitoruLongHelper.narrow(this.registerMonitor(monitorImpl, monitorTie));

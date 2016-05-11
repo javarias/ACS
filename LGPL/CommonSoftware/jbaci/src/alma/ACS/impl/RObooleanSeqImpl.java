@@ -144,7 +144,7 @@ public class RObooleanSeqImpl extends CommonComparablePropertyImpl implements RO
 
 	@Override
 	public boolean noDelta(Object value) {
-		return ((Integer)value).intValue() == 0;
+		return ((Boolean)value).booleanValue() == false;
 	}
 
 	@Override
@@ -157,7 +157,7 @@ public class RObooleanSeqImpl extends CommonComparablePropertyImpl implements RO
 
 	@Override
 	public Object readPropertyTypeCharacteristic(String name) throws NoSuchCharacteristic {
-		return characteristicModelImpl.getStringSeq(name);
+		return characteristicModelImpl.getBooleanSeq(name);
 	}
 
 }

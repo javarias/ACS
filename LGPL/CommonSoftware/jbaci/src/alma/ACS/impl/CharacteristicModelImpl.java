@@ -21,6 +21,7 @@
 
 package alma.ACS.impl;
 
+import java.math.BigInteger;
 import java.util.ArrayList;
 import java.util.regex.Pattern;
 
@@ -368,6 +369,27 @@ public class CharacteristicModelImpl implements CharacteristicModelOperations {
 	}
 	
 	/**
+	 * Read boolean sequence characteristic.
+	 * @param name	characteristic name.
+	 * @throws NoSuchCharacteristic is thrown if characterstic does not exist.
+	 */
+	public boolean[] getBooleanSeq(String name)
+		throws NoSuchCharacteristic
+	{
+		try {
+			String[] strAr = dao.get_string_seq(prefix+name);
+			boolean[] retVal = new boolean[strAr.length];
+			for (int i = 0; i < strAr.length; i++) {
+				retVal[i] = Boolean.parseBoolean(strAr[i]);
+			}
+			return retVal;
+		}
+		catch (Throwable th) {
+			throw new NoSuchCharacteristic(name, modelName);
+		}
+	}
+	
+	/**
 	 * Read sequence long characteristic.
 	 * @param name	characteristic name.
 	 * @throws NoSuchCharacteristic is thrown if characterstic does not exist.
@@ -466,6 +488,28 @@ public class CharacteristicModelImpl implements CharacteristicModelOperations {
 		{
 			System.out.println("CDB field: " + prefix + name);
 			th.printStackTrace();
+			throw new NoSuchCharacteristic(name, modelName);
+		}
+	}
+
+	public int[] getuLongSeq(String name) throws NoSuchCharacteristic {
+		try {
+			String[] strAr = dao.get_string_seq(prefix+name);
+			int[] retVal = new int[strAr.length];
+			for (int i = 0; i < strAr.length; i++) {
+				try {
+					retVal[i] = Integer.parseInt(strAr[i]);
+				} catch (NumberFormatException ex) {
+					BigInteger tmp = new BigInteger(strAr[i]);
+					if (tmp.signum() > 0)
+						retVal[i] = Integer.MAX_VALUE;
+					else
+						retVal[i] = Integer.MIN_VALUE;
+				}
+			}
+			return retVal;
+		}
+		catch (Throwable th)  {
 			throw new NoSuchCharacteristic(name, modelName);
 		}
 	}

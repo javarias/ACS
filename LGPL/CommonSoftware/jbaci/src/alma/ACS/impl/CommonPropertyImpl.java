@@ -337,19 +337,17 @@ public abstract class CommonPropertyImpl
 
 			if (propertyType.isPrimitive())
 			{
-
-			
 				if(propertyType.isAssignableFrom(double.class))
-				     Array.setDouble(historyValue, historyPosition, ((Double)value).doubleValue());
+				     Array.setDouble(historyValue, historyPosition, ((Number)value).doubleValue());
 					
 				else if (propertyType.isAssignableFrom(int.class))
-					Array.setInt(historyValue, historyPosition, ((Integer)value).intValue());
+					Array.setInt(historyValue, historyPosition, ((Number)value).intValue());
 					
 				else if (propertyType.isAssignableFrom(long.class))
-					Array.setLong(historyValue, historyPosition, ((Long)value).longValue());
+					Array.setLong(historyValue, historyPosition, ((Number)value).longValue());
 
 				else if (propertyType.isAssignableFrom(short.class))
-					Array.setShort(historyValue, historyPosition, ((Short)value).shortValue());
+					Array.setShort(historyValue, historyPosition, ((Number)value).shortValue());
 					
 				else if (propertyType.isAssignableFrom(boolean.class))
 					Array.setBoolean(historyValue, historyPosition, ((Boolean)value).booleanValue());
@@ -358,7 +356,7 @@ public abstract class CommonPropertyImpl
 					Array.setByte(historyValue, historyPosition, ((Byte)value).byteValue());
 
 				else if (propertyType.isAssignableFrom(float.class))
-					Array.setFloat(historyValue, historyPosition, ((Float)value).floatValue());
+					Array.setFloat(historyValue, historyPosition, ((Number)value).floatValue());
 
 				else if (propertyType.isAssignableFrom(char.class))
 					Array.setChar(historyValue, historyPosition, ((Character)value).charValue());
@@ -370,8 +368,16 @@ public abstract class CommonPropertyImpl
 				}
 					
 			}
-			else
-				Array.set(historyValue, historyPosition, value);
+			else {
+				try {
+					Array.set(historyValue, historyPosition, value);
+				} catch (IllegalArgumentException ex) {
+					System.out.println("This class: " + this.getClass().getName());
+					System.out.println(String.format("value type: %s \nHistory Type: %s", 
+							value.getClass().getName(), historyValue.getClass().getName()));
+					throw ex;
+				}
+			}
 			
 			// manage control variables
 			historyPosition = ++historyPosition % historySize;

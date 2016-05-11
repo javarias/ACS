@@ -21,8 +21,7 @@
 
 package alma.ACS.impl;
 
-import java.util.HashMap;
-import java.util.Iterator;
+import java.util.LinkedHashMap;
 import java.util.Map;
 import java.util.concurrent.PriorityBlockingQueue;
 import java.util.concurrent.ThreadPoolExecutor;
@@ -118,7 +117,7 @@ public class CharacteristicComponentImpl extends ComponentImplBase
 		}
 
 		// create properties list
-		properties = new HashMap<PropertyOperations, Servant>();
+		properties = new LinkedHashMap<PropertyOperations, Servant>();
 	}
 
 	/**
