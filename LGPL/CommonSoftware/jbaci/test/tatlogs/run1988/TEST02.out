@@ -1,0 +1,136 @@
+1 - === Starting PropertyDoubleTest JUnit test
+1 -  --endorsed -- alma.acs.testsupport.tat.TATJUnitRunner alma.PS.PropertyDoubleTest
+1 - java version "1.8.0_45"
+1 - Java(TM) SE Runtime Environment (build 1.8.0_45-b14)
+1 - Java HotSpot(TM) 64-Bit Server VM (build 25.45-b02, mixed mode)
+1 - 
+1 - TEST_RUNNER_REPORT success/total: 9/12
+1 - JUnitRunner: Errors and/or failures during test execution!
+1 - 
+1 - Test execution trace:
+1 - <<<<<<<<<<<<<<<<<<<
+1 - JUnit version 4.10
+1 - .E.E....E......
+1 - There were 3 failures:
+1 - 1) testCharacteristics(alma.PS.PropertyDoubleTest)
+1 - junit.framework.ComparisonFailure: expected:<[]readback> but was:<[PBEND_B_01:]readback>
+1 - 	at junit.framework.Assert.assertEquals(Assert.java:xx)
+1 - 	at junit.framework.Assert.assertEquals(Assert.java:xx)
+1 - 	at alma.PS.PropertyDoubleTest.testCharacteristics(PropertyDoubleTest.java:xx)
+1 - 	at sun.reflect.NativeMethodAccessorImpl.invoke0(Native Method)
+1 - 	at sun.reflect.NativeMethodAccessorImpl.invoke(NativeMethodAccessorImpl.java:xx)
+1 - 	at sun.reflect.DelegatingMethodAccessorImpl.invoke(DelegatingMethodAccessorImpl.java:xx)
+1 - 	at java.lang.reflect.Method.invoke(Method.java:xx)
+1 - 	at junit.framework.TestCase.runTest(TestCase.java:xx)
+1 - 	at junit.framework.TestCase.runBare(TestCase.java:xx)
+1 - 	at junit.framework.TestResult$1.protect(TestResult.java:xx)
+1 - 	at junit.framework.TestResult.runProtected(TestResult.java:xx)
+1 - 	at junit.framework.TestResult.run(TestResult.java:xx)
+1 - 	at junit.framework.TestCase.run(TestCase.java:xx)
+1 - 	at junit.framework.TestSuite.runTest(TestSuite.java:xx)
+1 - 	at junit.framework.TestSuite.run(TestSuite.java:xx)
+1 - 	at org.junit.internal.runners.JUnit38ClassRunner.run(JUnit38ClassRunner.java:xx)
+1 - 	at org.junit.runners.Suite.runChild(Suite.java:xx)
+1 - 	at org.junit.runners.Suite.runChild(Suite.java:xx)
+1 - 	at org.junit.runners.ParentRunner$3.run(ParentRunner.java:xx)
+1 - 	at org.junit.runners.ParentRunner$1.schedule(ParentRunner.java:xx)
+1 - 	at org.junit.runners.ParentRunner.runChildren(ParentRunner.java:xx)
+1 - 	at org.junit.runners.ParentRunner.access$000(ParentRunner.java:xx)
+1 - 	at org.junit.runners.ParentRunner$2.evaluate(ParentRunner.java:xx)
+1 - 	at org.junit.runners.ParentRunner.run(ParentRunner.java:xx)
+1 - 	at org.junit.runner.JUnitCore.run(JUnitCore.java:xx)
+1 - 	at org.junit.runner.JUnitCore.run(JUnitCore.java:xx)
+1 - 	at org.junit.runner.JUnitCore.run(JUnitCore.java:xx)
+1 - 	at alma.acs.testsupport.tat.TATJUnitRunner.runMain(TATJUnitRunner.java:xx)
+1 - 	at alma.acs.testsupport.tat.TATJUnitRunner.main(TATJUnitRunner.java:xx)
+1 - 2) testNewSubscriptionAlarm(alma.PS.PropertyDoubleTest)
+1 - org.omg.CORBA.NO_RESOURCES: Server-side Exception: null
+1 - 	at sun.reflect.NativeConstructorAccessorImpl.newInstance0(Native Method)
+1 - 	at sun.reflect.NativeConstructorAccessorImpl.newInstance(NativeConstructorAccessorImpl.java:xx)
+1 - 	at sun.reflect.DelegatingConstructorAccessorImpl.newInstance(DelegatingConstructorAccessorImpl.java:xx)
+1 - 	at java.lang.reflect.Constructor.newInstance(Constructor.java:xx)
+1 - 	at org.jacorb.orb.SystemExceptionHelper.read(SystemExceptionHelper.java:xx)
+1 - 	at org.jacorb.orb.ReplyReceiver.getReply(ReplyReceiver.java:xx)
+1 - 	at org.jacorb.orb.Delegate._invoke_internal(Delegate.java:xx)
+1 - 	at org.jacorb.orb.Delegate.invoke_internal(Delegate.java:xx)
+1 - 	at org.jacorb.orb.Delegate.invoke(Delegate.java:xx)
+1 - 	at org.omg.CORBA.portable.ObjectImpl._invoke(ObjectImpl.java:xx)
+1 - 	at alma.ACS._ROdoubleStub.new_subscription_Alarm(_ROdoubleStub.java:xx)
+1 - 	at alma.PS.PropertyDoubleTest.testNewSubscriptionAlarm(PropertyDoubleTest.java:xx)
+1 - 	at sun.reflect.NativeMethodAccessorImpl.invoke0(Native Method)
+1 - 	at sun.reflect.NativeMethodAccessorImpl.invoke(NativeMethodAccessorImpl.java:xx)
+1 - 	at sun.reflect.DelegatingMethodAccessorImpl.invoke(DelegatingMethodAccessorImpl.java:xx)
+1 - 	at java.lang.reflect.Method.invoke(Method.java:xx)
+1 - 	at junit.framework.TestCase.runTest(TestCase.java:xx)
+1 - 	at junit.framework.TestCase.runBare(TestCase.java:xx)
+1 - 	at junit.framework.TestResult$1.protect(TestResult.java:xx)
+1 - 	at junit.framework.TestResult.runProtected(TestResult.java:xx)
+1 - 	at junit.framework.TestResult.run(TestResult.java:xx)
+1 - 	at junit.framework.TestCase.run(TestCase.java:xx)
+1 - 	at junit.framework.TestSuite.runTest(TestSuite.java:xx)
+1 - 	at junit.framework.TestSuite.run(TestSuite.java:xx)
+1 - 	at org.junit.internal.runners.JUnit38ClassRunner.run(JUnit38ClassRunner.java:xx)
+1 - 	at org.junit.runners.Suite.runChild(Suite.java:xx)
+1 - 	at org.junit.runners.Suite.runChild(Suite.java:xx)
+1 - 	at org.junit.runners.ParentRunner$3.run(ParentRunner.java:xx)
+1 - 	at org.junit.runners.ParentRunner$1.schedule(ParentRunner.java:xx)
+1 - 	at org.junit.runners.ParentRunner.runChildren(ParentRunner.java:xx)
+1 - 	at org.junit.runners.ParentRunner.access$000(ParentRunner.java:xx)
+1 - 	at org.junit.runners.ParentRunner$2.evaluate(ParentRunner.java:xx)
+1 - 	at org.junit.runners.ParentRunner.run(ParentRunner.java:xx)
+1 - 	at org.junit.runner.JUnitCore.run(JUnitCore.java:xx)
+1 - 	at org.junit.runner.JUnitCore.run(JUnitCore.java:xx)
+1 - 	at org.junit.runner.JUnitCore.run(JUnitCore.java:xx)
+1 - 	at alma.acs.testsupport.tat.TATJUnitRunner.runMain(TATJUnitRunner.java:xx)
+1 - 	at alma.acs.testsupport.tat.TATJUnitRunner.main(TATJUnitRunner.java:xx)
+1 - 3) testGetHistory(alma.PS.PropertyDoubleTest)
+1 - junit.framework.AssertionFailedError: expected:<5> but was:<0>
+1 - 	at junit.framework.Assert.fail(Assert.java:xx)
+1 - 	at junit.framework.Assert.failNotEquals(Assert.java:xx)
+1 - 	at junit.framework.Assert.assertEquals(Assert.java:xx)
+1 - 	at junit.framework.Assert.assertEquals(Assert.java:xx)
+1 - 	at junit.framework.Assert.assertEquals(Assert.java:xx)
+1 - 	at alma.PS.PropertyDoubleTest.testGetHistory(PropertyDoubleTest.java:xx)
+1 - 	at sun.reflect.NativeMethodAccessorImpl.invoke0(Native Method)
+1 - 	at sun.reflect.NativeMethodAccessorImpl.invoke(NativeMethodAccessorImpl.java:xx)
+1 - 	at sun.reflect.DelegatingMethodAccessorImpl.invoke(DelegatingMethodAccessorImpl.java:xx)
+1 - 	at java.lang.reflect.Method.invoke(Method.java:xx)
+1 - 	at junit.framework.TestCase.runTest(TestCase.java:xx)
+1 - 	at junit.framework.TestCase.runBare(TestCase.java:xx)
+1 - 	at junit.framework.TestResult$1.protect(TestResult.java:xx)
+1 - 	at junit.framework.TestResult.runProtected(TestResult.java:xx)
+1 - 	at junit.framework.TestResult.run(TestResult.java:xx)
+1 - 	at junit.framework.TestCase.run(TestCase.java:xx)
+1 - 	at junit.framework.TestSuite.runTest(TestSuite.java:xx)
+1 - 	at junit.framework.TestSuite.run(TestSuite.java:xx)
+1 - 	at org.junit.internal.runners.JUnit38ClassRunner.run(JUnit38ClassRunner.java:xx)
+1 - 	at org.junit.runners.Suite.runChild(Suite.java:xx)
+1 - 	at org.junit.runners.Suite.runChild(Suite.java:xx)
+1 - 	at org.junit.runners.ParentRunner$3.run(ParentRunner.java:xx)
+1 - 	at org.junit.runners.ParentRunner$1.schedule(ParentRunner.java:xx)
+1 - 	at org.junit.runners.ParentRunner.runChildren(ParentRunner.java:xx)
+1 - 	at org.junit.runners.ParentRunner.access$000(ParentRunner.java:xx)
+1 - 	at org.junit.runners.ParentRunner$2.evaluate(ParentRunner.java:xx)
+1 - 	at org.junit.runners.ParentRunner.run(ParentRunner.java:xx)
+1 - 	at org.junit.runner.JUnitCore.run(JUnitCore.java:xx)
+1 - 	at org.junit.runner.JUnitCore.run(JUnitCore.java:xx)
+1 - 	at org.junit.runner.JUnitCore.run(JUnitCore.java:xx)
+1 - 	at alma.acs.testsupport.tat.TATJUnitRunner.runMain(TATJUnitRunner.java:xx)
+1 - 	at alma.acs.testsupport.tat.TATJUnitRunner.main(TATJUnitRunner.java:xx)
+1 - 
+1 - FAILURES!!!
+1 - Tests run: 12,  Failures: 3
+1 - 
+1 - >>>>>>>>>>>>>>>>>>>
+1 - 
+1 - System.out during test execution:
+1 - <<<<<<<<<<<<<<<<<<<
+1 - ------
+1 - ------
+1 - >>>>>>>>>>>>>>>>>>>
+1 - 
+1 - System.err during test execution:
+1 - <<<<<<<<<<<<<<<<<<<
+1 - >>>>>>>>>>>>>>>>>>>
+1 - 
+1 - === dispatchAction PropertyDouble test completed

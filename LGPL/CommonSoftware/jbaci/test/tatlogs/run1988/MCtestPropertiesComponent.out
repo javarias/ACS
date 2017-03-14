@@ -1,0 +1,80 @@
+1 - Number of Devices: 1
+1 - MC_TEST_PROPERTIES_COMPONENT 
+1 - 	MC_TEST_PROPERTIES_COMPONENT:doubleROProp ['1']
+1 - 		{'value': 1.0, 'time': ------------------L}
+1 - 		{'value': 1.0, 'time': ------------------L}
+1 - 	MC_TEST_PROPERTIES_COMPONENT:floatROProp ['2']
+1 - 		{'value': 2.0, 'time': ------------------L}
+1 - 		{'value': 2.0, 'time': ------------------L}
+1 - 	MC_TEST_PROPERTIES_COMPONENT:longROProp ['3']
+1 - 	MC_TEST_PROPERTIES_COMPONENT:uLongROProp ['4']
+1 - 	MC_TEST_PROPERTIES_COMPONENT:booleanROProp ['9']
+1 - 		{'value': False, 'time': ------------------L}
+1 - 		{'value': False, 'time': ------------------L}
+1 - 	MC_TEST_PROPERTIES_COMPONENT:patternROProp ['5']
+1 - 	MC_TEST_PROPERTIES_COMPONENT:stringROProp ['6']
+1 - 		{'value': 'strinRO', 'time': ------------------L}
+1 - 		{'value': 'strinRO', 'time': ------------------L}
+1 - 	MC_TEST_PROPERTIES_COMPONENT:longLongROProp ['7']
+1 - 		{'value': 6L, 'time': ------------------L}
+1 - 		{'value': 6L, 'time': ------------------L}
+1 - 	MC_TEST_PROPERTIES_COMPONENT:uLongLongROProp ['8']
+1 - 		{'value': 7L, 'time': ------------------L}
+1 - 		{'value': 7L, 'time': ------------------L}
+1 - 	MC_TEST_PROPERTIES_COMPONENT:booleanROProp []
+1 - 		{'value': False, 'time': ------------------L}
+1 - 		{'value': False, 'time': ------------------L}
+1 - 	MC_TEST_PROPERTIES_COMPONENT:doubleSeqROProp ['10']
+1 - 		{'value': [8.0, 9.0], 'time': ------------------L}
+1 - 		{'value': [8.0, 9.0], 'time': ------------------L}
+1 - 	MC_TEST_PROPERTIES_COMPONENT:floatSeqROProp ['11']
+1 - 		{'value': [10.0, 11.0], 'time': ------------------L}
+1 - 		{'value': [10.0, 11.0], 'time': ------------------L}
+1 - 	MC_TEST_PROPERTIES_COMPONENT:longSeqROProp ['12']
+1 - 	MC_TEST_PROPERTIES_COMPONENT:uLongSeqROProp ['13']
+1 - 	MC_TEST_PROPERTIES_COMPONENT:booleanSeqROProp ['14']
+1 - 		{'value': [False, True], 'time': ------------------L}
+1 - 		{'value': [False, True], 'time': ------------------L}
+1 - 	MC_TEST_PROPERTIES_COMPONENT:EnumTestROProp ['15']
+1 - 		{'value': 0L, 'time': ------------------L}
+1 - 		{'value': 0L, 'time': ------------------L}
+1 - 	MC_TEST_PROPERTIES_COMPONENT:doubleRWProp ['16']
+1 - 		{'value': 16.0, 'time': ------------------L}
+1 - 		{'value': 16.0, 'time': ------------------L}
+1 - 	MC_TEST_PROPERTIES_COMPONENT:floatRWProp ['17']
+1 - 		{'value': 17.0, 'time': ------------------L}
+1 - 		{'value': 17.0, 'time': ------------------L}
+1 - 	MC_TEST_PROPERTIES_COMPONENT:longRWProp ['18']
+1 - 		{'value': 18, 'time': ------------------L}
+1 - 		{'value': 18, 'time': ------------------L}
+1 - 	MC_TEST_PROPERTIES_COMPONENT:uLongRWProp ['19']
+1 - 	MC_TEST_PROPERTIES_COMPONENT:booleanRWProp ['24']
+1 - 		{'value': True, 'time': ------------------L}
+1 - 		{'value': True, 'time': ------------------L}
+1 - 	MC_TEST_PROPERTIES_COMPONENT:patternRWProp ['20']
+1 - 	MC_TEST_PROPERTIES_COMPONENT:stringRWProp ['21']
+1 - 		{'value': 'stringRW', 'time': ------------------L}
+1 - 		{'value': 'stringRW', 'time': ------------------L}
+1 - 	MC_TEST_PROPERTIES_COMPONENT:longLongRWProp ['22']
+1 - 		{'value': 21L, 'time': ------------------L}
+1 - 		{'value': 21L, 'time': ------------------L}
+1 - 	MC_TEST_PROPERTIES_COMPONENT:uLongLongRWProp ['23']
+1 - 		{'value': 22L, 'time': ------------------L}
+1 - 		{'value': 22L, 'time': ------------------L}
+1 - 	MC_TEST_PROPERTIES_COMPONENT:booleanRWProp []
+1 - 		{'value': True, 'time': ------------------L}
+1 - 		{'value': True, 'time': ------------------L}
+1 - 	MC_TEST_PROPERTIES_COMPONENT:doubleSeqRWProp ['25']
+1 - 		{'value': [23.0, 24.0], 'time': ------------------L}
+1 - 		{'value': [23.0, 24.0], 'time': ------------------L}
+1 - 	MC_TEST_PROPERTIES_COMPONENT:floatSeqRWProp ['26']
+1 - 		{'value': [25.0, 26.0], 'time': ------------------L}
+1 - 		{'value': [25.0, 26.0], 'time': ------------------L}
+1 - 	MC_TEST_PROPERTIES_COMPONENT:longSeqRWProp ['27']
+1 - 		{'value': [27, 28], 'time': ------------------L}
+1 - 		{'value': [27, 28], 'time': ------------------L}
+1 - 	MC_TEST_PROPERTIES_COMPONENT:uLongSeqRWProp ['28']
+1 - 	MC_TEST_PROPERTIES_COMPONENT:booleanSeqRWProp ['29']
+1 - 	MC_TEST_PROPERTIES_COMPONENT:EnumTestRWProp ['30']
+1 - 		{'value': 0L, 'time': ------------------L}
+1 - 		{'value': 0L, 'time': ------------------L}

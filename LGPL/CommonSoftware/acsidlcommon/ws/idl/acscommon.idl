@@ -46,7 +46,7 @@ module ACS {
         /** A 64-bit long used as a pattern of 64 bits. */
     typedef unsigned long long pattern;
 
-    /** A 32-bit signed integer */
+    /** A 32-bit unsigned integer */
     typedef unsigned long uLong;
     
     /** A 64-bit signed integer */

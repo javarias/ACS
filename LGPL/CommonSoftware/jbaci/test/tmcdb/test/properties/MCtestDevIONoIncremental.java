@@ -22,7 +22,11 @@ public class MCtestDevIONoIncremental<T> extends DataAccessSupport<T> implements
 
 	@Override
 	public boolean initializeValue() {
-		return true;
+		// tnakamot: this method now returns false so that this.value won't
+		//           be initialized by BACI properties which initializes the
+		//           value with set(...) method, and this instance keeps the
+		//           original value set in the constructor.
+		return false;
 	}
 
 	@Override

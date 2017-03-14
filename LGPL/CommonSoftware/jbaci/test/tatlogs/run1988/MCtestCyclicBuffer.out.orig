@@ -1,0 +1,47 @@
+1 - ErrorTrace (TimeStamp=Mon Mar 13 17:32:36 2017,
+1 -             File=/home/almamgr/git/ACS/LGPL/CommonSoftware/jbaci/bin/mcTestCyclicBuffer,
+1 -             Line=51,
+1 -             Routine=<module>,
+1 -             Host=localhost.localdomain,
+1 -             Process=22799,
+1 -             Thread=MainThread,
+1 -             Type=60200,
+1 -             Code=1,
+1 -             ShortDescrip=Registering Device Problem.,
+1 -             Severity=Error,
+1 -             Data: )
+1 - 
+1 -     ErrorTrace (TimeStamp=Mon Mar 13 17:32:36 2017,
+1 -                 File=MonitorCollectorImpl.cpp,
+1 -                 Line=206,
+1 -                 Routine=MonitorCollectorImpl::registerMonitoredComponentWithMultipleSerial,
+1 -                 Host=localhost.localdomain,
+1 -                 Process=monColTestCont,
+1 -                 Thread=ORBTask,
+1 -                 Type=60200,
+1 -                 Code=1,
+1 -                 ShortDescrip=Registering Device Problem.,
+1 -                 Severity=Error,
+1 -                 Data: Name=Device, Value=MC_TEST_COMPONENT; )
+1 - 
+1 -         ErrorTrace (TimeStamp=Mon Mar 13 17:32:36 2017,
+1 -                     File=MonitorCollectorImpl.cpp,
+1 -                     Line=235,
+1 -                     Routine=MonitorCollectorImpl::registerMonitoredDevice,
+1 -                     Host=localhost.localdomain,
+1 -                     Process=monColTestCont,
+1 -                     Thread=ORBTask,
+1 -                     Type=60200,
+1 -                     Code=7,
+1 -                     ShortDescrip=Device not collocated.,
+1 -                     Severity=Error,
+1 -                     Data: Name=Component, Value=MC_TEST_COMPONENT; )
+1 - 
+1 - Nominal test. Number of Devices: 0
+1 - Traceback (most recent call last):
+1 -   File "/home/almamgr/git/ACS/LGPL/CommonSoftware/jbaci/bin/mcTestCyclicBuffer", line 70, in <module>
+1 -     mc.startMonitoring('MC_TEST_COMPONENT')    
+1 -   File "/alma/ACS-FEB2017/ACSSW/lib/python/site-packages/MonitorCollector_idl.py", line 145, in startMonitoring
+1 -     return self._obj.invoke("startMonitoring", _0_TMCDB.MonitorCollector._d_startMonitoring, args)
+1 - MonitorErr.StartMonitoringProblemEx: MonitorErr.StartMonitoringProblemEx(errorTrace=ACSErr.ErrorTrace(file='MonitorCollectorImpl.cpp', lineNum=306, routine='MonitorCollectorImpl::startMonitoring', host='localhost.localdomain', process='monColTestCont', thread='ORBTask', timeStamp=137087191569591210L, sourceObject='', errorType=60200L, errorCode=3L, severity=Error, shortDescription='Could not start monitoring.', data=[ACSErr.NameValue(name='Device', value='MC_TEST_COMPONENT')], previousError=[]))
+1 - 2017-03-13T17:32:36.961 localdomain disconnect - Disconnect called for client

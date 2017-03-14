@@ -1,0 +1,49 @@
+1 - Number of Devices: 1
+1 - MC_TEST_COMPONENT 
+1 - 	MC_TEST_COMPONENT:doubleProp ['3432535']
+1 - 		{'value': -1.0, 'time': 137087190780000000L}
+1 - 		{'value': 0.0, 'time': 137087190790000000L}
+1 - 		{'value': 1.0, 'time': 137087190800000000L}
+1 - 		{'value': 2.0, 'time': 137087190810000000L}
+1 - 		{'value': 3.0, 'time': 137087190820000000L}
+1 - 		{'value': 4.0, 'time': 137087190830000000L}
+1 - 		{'value': 5.0, 'time': 137087190840000000L}
+1 - 		{'value': 6.0, 'time': 137087190850000000L}
+1 - 		{'value': 7.0, 'time': 137087190860000000L}
+1 - 		{'value': 8.0, 'time': 137087190870000000L}
+1 - 		{'value': 9.0, 'time': 137087190880000000L}
+1 - 		{'value': 10.0, 'time': 137087190890000000L}
+1 - 		{'value': 11.0, 'time': 137087190900000000L}
+1 - 		{'value': 12.0, 'time': 137087190910000000L}
+1 - 		{'value': 13.0, 'time': 137087190920000000L}
+1 - 		{'value': 14.0, 'time': 137087190930000000L}
+1 - 		{'value': 15.0, 'time': 137087190940000000L}
+1 - 		{'value': 16.0, 'time': 137087190950000000L}
+1 - 		{'value': 17.0, 'time': 137087190960000000L}
+1 - 		{'value': 18.0, 'time': 137087190970000000L}
+1 - 	MC_TEST_COMPONENT:longProp []
+1 - 	MC_TEST_COMPONENT:longSeqProp []
+1 - 		{'value': [0], 'time': 137087190780000000L}
+1 - 		{'value': [0], 'time': 137087190790000000L}
+1 - 		{'value': [0], 'time': 137087190800000000L}
+1 - 		{'value': [0], 'time': 137087190810000000L}
+1 - 		{'value': [0], 'time': 137087190820000000L}
+1 - 		{'value': [0], 'time': 137087190830000000L}
+1 - 		{'value': [0], 'time': 137087190840000000L}
+1 - 		{'value': [0], 'time': 137087190850000000L}
+1 - 		{'value': [0], 'time': 137087190860000000L}
+1 - 		{'value': [0], 'time': 137087190870000000L}
+1 - 		{'value': [0], 'time': 137087190880000000L}
+1 - 		{'value': [0], 'time': 137087190890000000L}
+1 - 		{'value': [0], 'time': 137087190900000000L}
+1 - 		{'value': [0], 'time': 137087190910000000L}
+1 - 		{'value': [0], 'time': 137087190920000000L}
+1 - 		{'value': [0], 'time': 137087190930000000L}
+1 - 		{'value': [0], 'time': 137087190940000000L}
+1 - 		{'value': [0], 'time': 137087190950000000L}
+1 - 		{'value': [0], 'time': 137087190960000000L}
+1 - 		{'value': [0], 'time': 137087190970000000L}
+1 - 	MC_TEST_COMPONENT:doubleSeqProp ['12124']
+1 - 	MC_TEST_COMPONENT:patternProp []
+1 - 2017-03-13T17:31:39.667 localdomain disconnect - Disconnect called for client
+1 - 2017-03-13T17:31:39.670 localdomain disconnect - Disconnect called for client

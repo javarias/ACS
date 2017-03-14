@@ -1,0 +1,43 @@
+1 - ErrorTrace (TimeStamp=XXXX,
+1 -             Line=XXXX,
+1 -             Routine=<module>,
+1 -             Host=xxxxxxxxx
+1 -             Process=xxxxxxxxx,
+1 -             Thread=MainThread,
+1 -             Type=60200,
+1 -             Code=1,
+1 -             ShortDescrip=Registering Device Problem.,
+1 -             Severity=Error,
+1 -             Data: )
+1 - 
+1 -     ErrorTrace (TimeStamp=XXXX,
+1 -                 Line=XXXX,
+1 -                 Routine=MonitorCollectorImpl::registerMonitoredComponentWithMultipleSerial,
+1 -                 Host=xxxxxxxxx
+1 -                 Process=monColTestCont,
+1 -                 Thread=ORBTask,
+1 -                 Type=60200,
+1 -                 Code=1,
+1 -                 ShortDescrip=Registering Device Problem.,
+1 -                 Severity=Error,
+1 -                 Data: Name=Device, Value=MC_TEST_COMPONENT; )
+1 - 
+1 -         ErrorTrace (TimeStamp=XXXX,
+1 -                     Line=XXXX,
+1 -                     Routine=MonitorCollectorImpl::registerMonitoredDevice,
+1 -                     Host=xxxxxxxxx
+1 -                     Process=monColTestCont,
+1 -                     Thread=ORBTask,
+1 -                     Type=60200,
+1 -                     Code=7,
+1 -                     ShortDescrip=Device not collocated.,
+1 -                     Severity=Error,
+1 -                     Data: Name=Component, Value=MC_TEST_COMPONENT; )
+1 - 
+1 - Number of Devices: 0
+1 - Traceback (most recent call last):
+1 -   File "/home/almamgr/git/ACS/LGPL/CommonSoftware/jbaci/bin/mcTestDynInterval", line 65, in <module>
+1 -     mc.deregisterMonitoredDevice('MC_TEST_COMPONENT')
+1 -   File "/alma/ACS-FEB2017/ACSSW/lib/python/site-packages/MonitorCollector_idl.py", line 142, in deregisterMonitoredDevice
+1 -     return self._obj.invoke("deregisterMonitoredDevice", _0_TMCDB.MonitorCollector._d_deregisterMonitoredDevice, args)
+1 - MonitorErr.DeviceNotRegisteredEx: MonitorErr.DeviceNotRegisteredEx(errorTrace=ACSErr.ErrorTrace(file='MonitorCollectorImpl.cpp', lineNum=277, routine='MonitorCollectorImpl::deregisterMonitoredDevice', host='localhost.localdomain', process='monColTestCont', thread='ORBTask', timeStamp=137087191255835720L, sourceObject='', errorType=60200L, errorCode=2L, severity=Error, shortDescription='Device has not been registered.', data=[ACSErr.NameValue(name='Device', value='MC_TEST_COMPONENT')], previousError=[]))

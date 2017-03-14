@@ -1,0 +1,71 @@
+1,25c1,43
+< 1 - MC_TEST_COMPONENT2 
+< 1 - 	MC_TEST_COMPONENT2:doubleProp ['3432535']
+< 1 - 	MC_TEST_COMPONENT2:doubleSeqProp ['12124']
+< 1 - 	MC_TEST_COMPONENT2:longProp []
+< 1 - 	MC_TEST_COMPONENT2:longSeqProp []
+< 1 - 	MC_TEST_COMPONENT2:patternProp []
+< 1 - Number of Devices: 1
+< 1 - 		{'value': [0.0, 0.0, 0.0, 0.0, 0.0, 0.0, 0.0, 0.0, 0.0, 0.0, 0.0, 0.0, 0.0, 0.0, 0.0, 0.0, 0.0, 0.0, 0.0, 0.0, 0.0, 0.0, 0.0, 0.0, 0.0], 'time': ------------------L}
+< 1 - 		{'value': 0.0, 'time': ------------------L}
+< 1 - 		{'value': [1.0, 1.0, 1.0, 1.0, 1.0, 1.0, 1.0, 1.0, 1.0, 1.0, 1.0, 1.0, 1.0, 1.0, 1.0, 1.0, 1.0, 1.0, 1.0, 1.0, 1.0, 1.0, 1.0, 1.0, 1.0], 'time': ------------------L}
+< 1 - 		{'value': 1.0, 'time': ------------------L}
+< 1 - 		{'value': [2.0, 2.0, 2.0, 2.0, 2.0, 2.0, 2.0, 2.0, 2.0, 2.0, 2.0, 2.0, 2.0, 2.0, 2.0, 2.0, 2.0, 2.0, 2.0, 2.0, 2.0, 2.0, 2.0, 2.0, 2.0], 'time': ------------------L}
+< 1 - 		{'value': 2.0, 'time': ------------------L}
+< 1 - 		{'value': [3.0, 3.0, 3.0, 3.0, 3.0, 3.0, 3.0, 3.0, 3.0, 3.0, 3.0, 3.0, 3.0, 3.0, 3.0, 3.0, 3.0, 3.0, 3.0, 3.0, 3.0, 3.0, 3.0, 3.0, 3.0], 'time': ------------------L}
+< 1 - 		{'value': 3.0, 'time': ------------------L}
+< 1 - 		{'value': [4.0, 4.0, 4.0, 4.0, 4.0, 4.0, 4.0, 4.0, 4.0, 4.0, 4.0, 4.0, 4.0, 4.0, 4.0, 4.0, 4.0, 4.0, 4.0, 4.0, 4.0, 4.0, 4.0, 4.0, 4.0], 'time': ------------------L}
+< 1 - 		{'value': 4.0, 'time': ------------------L}
+< 1 - 		{'value': [5.0, 5.0, 5.0, 5.0, 5.0, 5.0, 5.0, 5.0, 5.0, 5.0, 5.0, 5.0, 5.0, 5.0, 5.0, 5.0, 5.0, 5.0, 5.0, 5.0, 5.0, 5.0, 5.0, 5.0, 5.0], 'time': ------------------L}
+< 1 - 		{'value': 5.0, 'time': ------------------L}
+< 1 - 		{'value': [6.0, 6.0, 6.0, 6.0, 6.0, 6.0, 6.0, 6.0, 6.0, 6.0, 6.0, 6.0, 6.0, 6.0, 6.0, 6.0, 6.0, 6.0, 6.0, 6.0, 6.0, 6.0, 6.0, 6.0, 6.0], 'time': ------------------L}
+< 1 - 		{'value': 6.0, 'time': ------------------L}
+< 1 - 		{'value': [7.0, 7.0, 7.0, 7.0, 7.0, 7.0, 7.0, 7.0, 7.0, 7.0, 7.0, 7.0, 7.0, 7.0, 7.0, 7.0, 7.0, 7.0, 7.0, 7.0, 7.0, 7.0, 7.0, 7.0, 7.0], 'time': ------------------L}
+< 1 - 		{'value': 7.0, 'time': ------------------L}
+< 1 - 		{'value': [8.0, 8.0, 8.0, 8.0, 8.0, 8.0, 8.0, 8.0, 8.0, 8.0, 8.0, 8.0, 8.0, 8.0, 8.0, 8.0, 8.0, 8.0, 8.0, 8.0, 8.0, 8.0, 8.0, 8.0, 8.0], 'time': ------------------L}
+< 1 - 		{'value': 8.0, 'time': ------------------L}
+---
+> 1 - 
+> 1 - 
+> 1 - 
+> 1 -                 Code=1,
+> 1 -             Code=1,
+> 1 -                     Code=7,
+> 1 -             Data: )
+> 1 -                     Data: Name=Component, Value=MC_TEST_COMPONENT2; )
+> 1 -                 Data: Name=Device, Value=MC_TEST_COMPONENT2; )
+> 1 -         ErrorTrace (TimeStamp=XXXX,
+> 1 -     ErrorTrace (TimeStamp=XXXX,
+> 1 - ErrorTrace (TimeStamp=XXXX,
+> 1 -   File "/alma/ACS-FEB2017/ACSSW/lib/python/site-packages/MonitorCollector_idl.py", line 142, in deregisterMonitoredDevice
+> 1 -   File "/home/almamgr/git/ACS/LGPL/CommonSoftware/jbaci/bin/mcTestDynEnable", line 67, in <module>
+> 1 -                     Host=xxxxxxxxx
+> 1 -                 Host=xxxxxxxxx
+> 1 -             Host=xxxxxxxxx
+> 1 -                     Line=XXXX,
+> 1 -                 Line=XXXX,
+> 1 -             Line=XXXX,
+> 1 -     mc.deregisterMonitoredDevice('MC_TEST_COMPONENT2')
+> 1 - MonitorErr.DeviceNotRegisteredEx: MonitorErr.DeviceNotRegisteredEx(errorTrace=ACSErr.ErrorTrace(file='MonitorCollectorImpl.cpp', lineNum=277, routine='MonitorCollectorImpl::deregisterMonitoredDevice', host='localhost.localdomain', process='monColTestCont', thread='ORBTask', timeStamp=137087191192442720L, sourceObject='', errorType=60200L, errorCode=2L, severity=Error, shortDescription='Device has not been registered.', data=[ACSErr.NameValue(name='Device', value='MC_TEST_COMPONENT2')], previousError=[]))
+> 1 - Number of Devices: 0
+> 1 -                     Process=monColTestCont,
+> 1 -                 Process=monColTestCont,
+> 1 -             Process=xxxxxxxxx,
+> 1 -     return self._obj.invoke("deregisterMonitoredDevice", _0_TMCDB.MonitorCollector._d_deregisterMonitoredDevice, args)
+> 1 -             Routine=<module>,
+> 1 -                 Routine=MonitorCollectorImpl::registerMonitoredComponentWithMultipleSerial,
+> 1 -                     Routine=MonitorCollectorImpl::registerMonitoredDevice,
+> 1 -                     Severity=Error,
+> 1 -                 Severity=Error,
+> 1 -             Severity=Error,
+> 1 -                     ShortDescrip=Device not collocated.,
+> 1 -                 ShortDescrip=Registering Device Problem.,
+> 1 -             ShortDescrip=Registering Device Problem.,
+> 1 -             Thread=MainThread,
+> 1 -                     Thread=ORBTask,
+> 1 -                 Thread=ORBTask,
+> 1 - Traceback (most recent call last):
+> 1 -                     Type=60200,
+> 1 -                 Type=60200,
+> 1 -             Type=60200,
+

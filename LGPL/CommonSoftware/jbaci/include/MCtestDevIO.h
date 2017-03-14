@@ -50,7 +50,7 @@ template <class T> class MCtestDevIO : public DevIO<T>
 
     virtual ~MCtestDevIO() {};
 
-    virtual bool initializeValue(){ return true; }
+    virtual bool initializeValue(){ return false; }
 
     /**
      *  @throw ACSErr::ACSbaseExImpl
@@ -99,7 +99,7 @@ public:
 
 		virtual ~MCtestDevIOSeq() {};
 
-		virtual bool initializeValue(){ return true; }
+		virtual bool initializeValue(){ return false; }
 
 
 
@@ -140,7 +140,16 @@ protected:
 		{}
 	
 		virtual ~MCtestDevIONoIncremental() {};
-		virtual bool initializeValue(){ return true; }
+
+		/**
+		 * tnakamoto: This method returns false so that the value
+		 * held by this instance won't be initialized by BACI
+		 * property, which sets the default value defined in CDB.
+		 * For the testing purposes, we don't want this behavior,
+		 * because, in CDB, XML schema doesn't allow us to define
+		 * default array value with 2 or more elements.
+		 */
+		virtual bool initializeValue(){ return false; }
 	
 		/**
 		 *  @throw ACSErr::ACSbaseExImpl
@@ -180,7 +189,7 @@ protected:
 			{}
 
 			virtual ~MCtestDevIOSeqNoIncremental() {};
-			virtual bool initializeValue(){ return true; }
+			virtual bool initializeValue(){ return false; }
 	
 	
 	

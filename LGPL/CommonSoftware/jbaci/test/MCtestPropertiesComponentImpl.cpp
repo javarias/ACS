@@ -69,87 +69,111 @@ MCtestPropertiesComponentImpl::MCtestPropertiesComponentImpl(const ACE_CString& 
 {
 	AUTO_TRACE("MCtestPropertiesComponentImpl::MCtestPropertiesComponentImpl");
 	//Initialize Values
-	m_doubleROVal = 0.0;
+	m_doubleROVal = 3.141592653589793; // pi in double precision
 	m_time1 = 134608945243381570;
 	m_doubleRODevIO = new MCtestDevIONoIncremental<CORBA::Double>(m_doubleROVal, m_time1);
+	printf("tnakamoto: m_doubleROVal = %f\n", m_doubleROVal);
 	m_doubleROProp_p = new ROdouble(name+":doubleROProp", getComponent(), m_doubleRODevIO);
 	CHARACTERISTIC_COMPONENT_PROPERTY(doubleROProp, m_doubleROProp_p);
-	m_floatROVal = 0.0;
+	m_floatROVal = 3.141592; // pi in single precision
 	m_time2 = 134608945243381570;
 	m_floatRODevIO = new MCtestDevIONoIncremental<CORBA::Float>(m_floatROVal, m_time2);
 	m_floatROProp_p = new ROfloat(name+":floatROProp", getComponent(), m_floatRODevIO);
 	CHARACTERISTIC_COMPONENT_PROPERTY(floatROProp, m_floatROProp_p);
-	m_longROVal = 0;
+	m_longROVal = -2147483648; // Minimimum value of 32 bit integer.
 	m_time3 = 134608945243381570;
 	m_longRODevIO = new MCtestDevIONoIncremental<CORBA::Long>(m_longROVal, m_time3);
 	m_longROProp_p = new ROlong(name+":longROProp", getComponent(), m_longRODevIO);
 	CHARACTERISTIC_COMPONENT_PROPERTY(longROProp, m_longROProp_p);
-	m_uLongROVal = 0;
+	m_uLongROVal = 4294967295U; // Maximum value of 32 bit integer.
 	m_time4 = 134608945243381570;
 	m_uLongRODevIO = new MCtestDevIONoIncremental<ACS::uLong>(m_uLongROVal, m_time4);
 	m_uLongROProp_p = new ROuLong(name+":uLongROProp", getComponent(), m_uLongRODevIO);
 	CHARACTERISTIC_COMPONENT_PROPERTY(uLongROProp, m_uLongROProp_p);
-	m_patternROVal = 0;
+	m_patternROVal = 18446744073709551615ULL; // Maximum value of 64 bit unsigned integer.
 	m_time5 = 134608945243381570;
 	m_patternRODevIO = new MCtestDevIONoIncremental<ACS::pattern>(m_patternROVal, m_time5);
 	m_patternROProp_p = new ROpattern(name+":patternROProp", getComponent(), m_patternRODevIO);
 	CHARACTERISTIC_COMPONENT_PROPERTY(patternROProp, m_patternROProp_p);
-	m_time6 = 134608945243381570;
+	m_time6 = 134608945243381570;    
+	m_stringROVal = ACE_CString("stringROProp");
 	m_stringRODevIO = new MCtestDevIONoIncremental<ACE_CString>(m_stringROVal, m_time6);
 	m_stringROProp_p = new ROstring(name+":stringROProp", getComponent(), m_stringRODevIO);
 	CHARACTERISTIC_COMPONENT_PROPERTY(stringROProp, m_stringROProp_p);
-	m_longLongROVal = 0;
+	m_longLongROVal = -9223372036854775808LL; // Minimum value of 64 bit integer.
 	m_time7 = 134608945243381570;
 	m_longLongRODevIO = new MCtestDevIONoIncremental<ACS::longLong>(m_longLongROVal, m_time7);
 	m_longLongROProp_p = new ROlongLong(name+":longLongROProp", getComponent(), m_longLongRODevIO);
 	CHARACTERISTIC_COMPONENT_PROPERTY(longLongROProp, m_longLongROProp_p);
-	m_uLongLongROVal = 0;
+	m_uLongLongROVal = 18446744073709551615ULL; // Maximum value of 64 bit unsigned integer.
 	m_time8 = 134608945243381570;
 	m_uLongLongRODevIO = new MCtestDevIONoIncremental<ACS::uLongLong>(m_uLongLongROVal, m_time8);
 	m_uLongLongROProp_p = new ROuLongLong(name+":uLongLongROProp", getComponent(), m_uLongLongRODevIO);
 	CHARACTERISTIC_COMPONENT_PROPERTY(uLongLongROProp, m_uLongLongROProp_p);
-	m_booleanROVal = 0;
+	m_booleanROVal = true;
 	m_time9 = 134608945243381570;
 	m_booleanRODevIO = new MCtestDevIONoIncremental<CORBA::Boolean>(m_booleanROVal, m_time9);
 	m_booleanROProp_p = new ROboolean(name+":booleanROProp", getComponent(), m_booleanRODevIO);
 	CHARACTERISTIC_COMPONENT_PROPERTY(booleanROProp, m_booleanROProp_p);
-	m_doubleSeqROVal.length(2);
-	for(unsigned int i=0;i<m_doubleSeqROVal.length();i++)
-		m_doubleSeqROVal[i]=0.0;
+	m_doubleSeqROVal.length(10);
+	m_doubleSeqROVal[0] = 3.141592653589793;        // pi in double precision.
+	m_doubleSeqROVal[1] = 2.718281828459045;        // e in double precision.
+	m_doubleSeqROVal[2] = 299792458;                // Speed of light in m/s.
+	m_doubleSeqROVal[3] = 12.56637061435917e-7;     // Vacuum permeability in H/m in double precision.
+	m_doubleSeqROVal[4] = 8.854187817620389e-12;    // Electric constant in F/m in double precision.
+	m_doubleSeqROVal[5] = 376.7303134617706;        // Impedance of free space in ohm in double precision.
+	m_doubleSeqROVal[6] = 1.7976931348623158e+308;  // Maximum value of double precision.
+	m_doubleSeqROVal[7] = -1.7976931348623158e+308; // Minimum value of double precision.
+	m_doubleSeqROVal[8] = 1.0 + 2.2204460492503131e-016;  // One plus machine epsilon of double precision.
+	m_doubleSeqROVal[9] = 0.0;
 	m_time10 = 134608945243381570;
 	m_doubleSeqRODevIO = new MCtestDevIOSeqNoIncremental<ACS::doubleSeq>(m_doubleSeqROVal, m_time10);
 	m_doubleSeqROProp_p = new ROdoubleSeq(name+":doubleSeqROProp", getComponent(), m_doubleSeqRODevIO);
 	CHARACTERISTIC_COMPONENT_PROPERTY(doubleSeqROProp, m_doubleSeqROProp_p);
-	m_floatSeqROVal.length(2);
-	for(unsigned int i=0;i<m_floatSeqROVal.length();i++)
-		m_floatSeqROVal[i]=0.0;
+	m_floatSeqROVal.length(9);
+	m_floatSeqROVal[0] = 3.141593;       // pi in single precision.
+	m_floatSeqROVal[1] = 2.718282;       // e in single precision.
+	m_floatSeqROVal[2] = 29979246e+1;    // Speed of light in m/s in single precision.
+	m_floatSeqROVal[3] = 12.56637e-7;    // Vacuum permeability in H/m in single precision.
+	m_floatSeqROVal[4] = 8.854188e-12;   // Electric constant in F/m in single precision.
+	m_floatSeqROVal[5] = 376.7303;       // Impedance of free space in ohm in single precision.
+	m_floatSeqROVal[6] = 3.402823e+38;   // Maximum value of single precision.
+	m_floatSeqROVal[7] = -3.402823e+38;  // Minimum value of single precision.
+	m_floatSeqROVal[8] = 1.0 + 1.192093e-7;  // One plus machine epsilon of single precision.
+	m_floatSeqROVal[9] = 0.0;
 	m_time11 = 134608945243381570;
 	m_floatSeqRODevIO = new MCtestDevIOSeqNoIncremental<ACS::floatSeq>(m_floatSeqROVal, m_time11);
 	m_floatSeqROProp_p = new ROfloatSeq(name+":floatSeqROProp", getComponent(), m_floatSeqRODevIO);
 	CHARACTERISTIC_COMPONENT_PROPERTY(floatSeqROProp, m_floatSeqROProp_p);
-	m_longSeqROVal.length(2);
-	for(unsigned int i=0;i<m_longSeqROVal.length();i++)
-		m_longSeqROVal[i]=0;
+	m_longSeqROVal.length(5);
+	m_longSeqROVal[0] = -2147483648; // Minimimum value of 32 bit integer.
+	m_longSeqROVal[1] = -1;
+	m_longSeqROVal[2] = 0;
+	m_longSeqROVal[3] = 1;
+	m_longSeqROVal[4] = 2147483647;  // Maximum value of 32 bit integer.
 	m_time12 = 134608945243381570;
 	m_longSeqRODevIO = new MCtestDevIOSeqNoIncremental<ACS::longSeq>(m_longSeqROVal, m_time12);
 	m_longSeqROProp_p = new ROlongSeq(name+":longSeqROProp", getComponent(), m_longSeqRODevIO);
 	CHARACTERISTIC_COMPONENT_PROPERTY(longSeqROProp, m_longSeqROProp_p);
-	m_uLongSeqROVal.length(2);
-	for(unsigned int i=0;i<m_uLongSeqROVal.length();i++)
-		m_uLongSeqROVal[i]=0;
+	m_uLongSeqROVal.length(3);
+	m_uLongSeqROVal[0] = 0;
+	m_uLongSeqROVal[1] = 1;
+	m_uLongSeqROVal[2] = 4294967295U; // Maximum value of 32 bit integer.
 	m_time13 = 134608945243381570;
 	m_uLongSeqRODevIO = new MCtestDevIOSeqNoIncremental<ACS::uLongSeq>(m_uLongSeqROVal, m_time13);
 	m_uLongSeqROProp_p = new ROuLongSeq(name+":uLongSeqROProp", getComponent(), m_uLongSeqRODevIO);
 	CHARACTERISTIC_COMPONENT_PROPERTY(uLongSeqROProp, m_uLongSeqROProp_p);
-	m_booleanSeqROVal.length(2);
-	for(unsigned int i=0;i<m_booleanSeqROVal.length();i++)
-		m_booleanSeqROVal[i]=0;
+	m_booleanSeqROVal.length(3);
+	m_booleanSeqROVal[0] = true;
+	m_booleanSeqROVal[1] = false;
+	m_booleanSeqROVal[2] = true;
 	m_time14 = 134608945243381570;
 	m_booleanSeqRODevIO = new MCtestDevIOSeqNoIncremental<ACS::booleanSeq>(m_booleanSeqROVal, m_time14);
 	m_booleanSeqROProp_p = new RObooleanSeq(name+":booleanSeqROProp", getComponent(), m_booleanSeqRODevIO);
 	CHARACTERISTIC_COMPONENT_PROPERTY(booleanSeqROProp, m_booleanSeqROProp_p);
 	m_EnumTestROVal = 0;
 	m_time15 = 134608945243381570;
+	m_EnumTestROVal = STATE1;
 	m_EnumTestRODevIO = new MCtestDevIONoIncremental<EnumTest>(m_EnumTestROVal, m_time15);
 	m_EnumTestROProp_p = new ROEnumImpl<ACS_ENUM_T(EnumTest), POA_TMCDB::ROEnumTest>(name+":EnumTestROProp", getComponent(), m_EnumTestRODevIO);
 	CHARACTERISTIC_COMPONENT_PROPERTY(EnumTestROProp, m_EnumTestROProp_p);

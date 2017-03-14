@@ -1,0 +1,179 @@
+1 - Number of Devices: 1
+1 - MC_TEST_ALARMS_COMPONENT 
+1 - 	MC_TEST_ALARMS_COMPONENT:doubleROProp ['1']
+1 - Alarm: 	{'value': 1.0, 'time': 137087191402873560L}
+1 - Alarm: 	{'value': 1.0, 'time': 137087191412873560L}
+1 - Alarm: 	{'value': 2.0, 'time': 137087191422873560L}
+1 - Alarm: 	{'value': 3.0, 'time': 137087191424119000L}
+1 - 		{'value': 1.0, 'time': 134608945243381570L}
+1 - 		{'value': 2.0, 'time': 134608945243381570L}
+1 - 		{'value': 3.0, 'time': 134608945243381570L}
+1 - Alarm: 	{'value': 3.0, 'time': 137087191432873560L}
+1 - Alarm: 	{'value': 4.0, 'time': 137087191442873560L}
+1 - Alarm: 	{'value': 5.0, 'time': 137087191452873560L}
+1 - Alarm: 	{'value': 6.0, 'time': 137087191462873560L}
+1 - Alarm: 	{'value': 7.0, 'time': 137087191472873560L}
+1 - Alarm: 	{'value': 8.0, 'time': 137087191482873560L}
+1 - Alarm: 	{'value': 9.0, 'time': 137087191492873560L}
+1 - Alarm: 	{'value': 10.0, 'time': 137087191502873560L}
+1 - 	MC_TEST_ALARMS_COMPONENT:floatROProp ['2']
+1 - Alarm: 	{'value': 1.0, 'time': 137087191402912680L}
+1 - Alarm: 	{'value': 2.0, 'time': 137087191412912680L}
+1 - Alarm: 	{'value': 3.0, 'time': 137087191422912680L}
+1 - Alarm: 	{'value': 4.0, 'time': 137087191435100070L}
+1 - 		{'value': 1.0, 'time': 134608945243381570L}
+1 - 		{'value': 2.0, 'time': 134608945243381570L}
+1 - 		{'value': 3.0, 'time': 134608945243381570L}
+1 - 		{'value': 4.0, 'time': 134608945243381570L}
+1 - Alarm: 	{'value': 4.0, 'time': 137087191432912680L}
+1 - Alarm: 	{'value': 5.0, 'time': 137087191442912680L}
+1 - Alarm: 	{'value': 6.0, 'time': 137087191452912680L}
+1 - Alarm: 	{'value': 7.0, 'time': 137087191462912680L}
+1 - Alarm: 	{'value': 8.0, 'time': 137087191472912680L}
+1 - Alarm: 	{'value': 9.0, 'time': 137087191482912680L}
+1 - Alarm: 	{'value': 10.0, 'time': 137087191492912680L}
+1 - 	MC_TEST_ALARMS_COMPONENT:longROProp ['3']
+1 - Alarm: 	{'value': 1, 'time': 137087191402957320L}
+1 - Alarm: 	{'value': 2, 'time': 137087191412957320L}
+1 - Alarm: 	{'value': 3, 'time': 137087191422957320L}
+1 - Alarm: 	{'value': 4, 'time': 137087191435110930L}
+1 - 		{'value': 1, 'time': 134608945243381570L}
+1 - 		{'value': 2, 'time': 134608945243381570L}
+1 - 		{'value': 3, 'time': 134608945243381570L}
+1 - 		{'value': 4, 'time': 134608945243381570L}
+1 - Alarm: 	{'value': 4, 'time': 137087191432957320L}
+1 - Alarm: 	{'value': 5, 'time': 137087191442957320L}
+1 - Alarm: 	{'value': 6, 'time': 137087191452957320L}
+1 - Alarm: 	{'value': 7, 'time': 137087191462957320L}
+1 - Alarm: 	{'value': 8, 'time': 137087191472957320L}
+1 - Alarm: 	{'value': 9, 'time': 137087191482957320L}
+1 - Alarm: 	{'value': 10, 'time': 137087191492957320L}
+1 - 	MC_TEST_ALARMS_COMPONENT:uLongROProp ['4']
+1 - Alarm: 	{'value': 1L, 'time': 137087191403001790L}
+1 - Alarm: 	{'value': 2L, 'time': 137087191413001790L}
+1 - Alarm: 	{'value': 3L, 'time': 137087191423001790L}
+1 - Alarm: 	{'value': 4L, 'time': 137087191435120000L}
+1 - 		{'value': 1L, 'time': 134608945243381570L}
+1 - 		{'value': 2L, 'time': 134608945243381570L}
+1 - 		{'value': 3L, 'time': 134608945243381570L}
+1 - 		{'value': 4L, 'time': 134608945243381570L}
+1 - Alarm: 	{'value': 4L, 'time': 137087191433001790L}
+1 - Alarm: 	{'value': 5L, 'time': 137087191443001790L}
+1 - Alarm: 	{'value': 6L, 'time': 137087191453001790L}
+1 - Alarm: 	{'value': 7L, 'time': 137087191463001790L}
+1 - Alarm: 	{'value': 8L, 'time': 137087191473001790L}
+1 - Alarm: 	{'value': 9L, 'time': 137087191483001790L}
+1 - Alarm: 	{'value': 10L, 'time': 137087191493001790L}
+1 - 	MC_TEST_ALARMS_COMPONENT:longLongROProp ['5']
+1 - Alarm: 	{'value': 1L, 'time': 137087191403042230L}
+1 - Alarm: 	{'value': 2L, 'time': 137087191413042230L}
+1 - Alarm: 	{'value': 3L, 'time': 137087191423042230L}
+1 - Alarm: 	{'value': 4L, 'time': 137087191435129110L}
+1 - 		{'value': 1L, 'time': 134608945243381570L}
+1 - 		{'value': 2L, 'time': 134608945243381570L}
+1 - 		{'value': 3L, 'time': 134608945243381570L}
+1 - 		{'value': 4L, 'time': 134608945243381570L}
+1 - Alarm: 	{'value': 4L, 'time': 137087191433042230L}
+1 - Alarm: 	{'value': 5L, 'time': 137087191443042230L}
+1 - Alarm: 	{'value': 6L, 'time': 137087191453042230L}
+1 - Alarm: 	{'value': 7L, 'time': 137087191463042230L}
+1 - Alarm: 	{'value': 8L, 'time': 137087191473042230L}
+1 - Alarm: 	{'value': 9L, 'time': 137087191483042230L}
+1 - Alarm: 	{'value': 10L, 'time': 137087191493042230L}
+1 - 	MC_TEST_ALARMS_COMPONENT:uLongLongROProp ['6']
+1 - Alarm: 	{'value': 1L, 'time': 137087191403084090L}
+1 - Alarm: 	{'value': 2L, 'time': 137087191413084090L}
+1 - Alarm: 	{'value': 3L, 'time': 137087191423084090L}
+1 - Alarm: 	{'value': 4L, 'time': 137087191435137650L}
+1 - 		{'value': 1L, 'time': 134608945243381570L}
+1 - 		{'value': 2L, 'time': 134608945243381570L}
+1 - 		{'value': 3L, 'time': 134608945243381570L}
+1 - 		{'value': 4L, 'time': 134608945243381570L}
+1 - Alarm: 	{'value': 4L, 'time': 137087191433084090L}
+1 - Alarm: 	{'value': 5L, 'time': 137087191443084090L}
+1 - Alarm: 	{'value': 6L, 'time': 137087191453084090L}
+1 - Alarm: 	{'value': 7L, 'time': 137087191463084090L}
+1 - Alarm: 	{'value': 8L, 'time': 137087191473084090L}
+1 - Alarm: 	{'value': 9L, 'time': 137087191483084090L}
+1 - Alarm: 	{'value': 10L, 'time': 137087191493084090L}
+1 - 	MC_TEST_ALARMS_COMPONENT:booleanROProp ['7']
+1 - Alarm: 	{'value': True, 'time': 137087191405114210L}
+1 - 		{'value': True, 'time': 134608945243381570L}
+1 - Alarm: 	{'value': True, 'time': 137087191403133670L}
+1 - Alarm: 	{'value': True, 'time': 137087191413133670L}
+1 - Alarm: 	{'value': True, 'time': 137087191423133670L}
+1 - Alarm: 	{'value': True, 'time': 137087191433133670L}
+1 - Alarm: 	{'value': True, 'time': 137087191443133670L}
+1 - Alarm: 	{'value': True, 'time': 137087191453133670L}
+1 - Alarm: 	{'value': True, 'time': 137087191463133670L}
+1 - Alarm: 	{'value': True, 'time': 137087191473133670L}
+1 - Alarm: 	{'value': True, 'time': 137087191483133670L}
+1 - Alarm: 	{'value': True, 'time': 137087191493133670L}
+1 - 	MC_TEST_ALARMS_COMPONENT:doubleSeqROProp ['8']
+1 - Alarm: 	{'value': [1.0, 1.0], 'time': 137087191403179130L}
+1 - Alarm: 	{'value': [2.0, 2.0], 'time': 137087191413179130L}
+1 - Alarm: 	{'value': [3.0, 3.0], 'time': 137087191423179130L}
+1 - Alarm: 	{'value': [4.0, 4.0], 'time': 137087191433179130L}
+1 - Alarm: 	{'value': [5.0, 5.0], 'time': 137087191443179130L}
+1 - Alarm: 	{'value': [6.0, 6.0], 'time': 137087191453179130L}
+1 - Alarm: 	{'value': [7.0, 7.0], 'time': 137087191463179130L}
+1 - Alarm: 	{'value': [8.0, 8.0], 'time': 137087191473179130L}
+1 - Alarm: 	{'value': [9.0, 9.0], 'time': 137087191483179130L}
+1 - Alarm: 	{'value': [10.0, 10.0], 'time': 137087191493179130L}
+1 - 	MC_TEST_ALARMS_COMPONENT:floatSeqROProp ['9']
+1 - Alarm: 	{'value': [1.0, 1.0], 'time': 137087191403207430L}
+1 - Alarm: 	{'value': [2.0, 2.0], 'time': 137087191413207430L}
+1 - Alarm: 	{'value': [3.0, 3.0], 'time': 137087191423207430L}
+1 - Alarm: 	{'value': [4.0, 4.0], 'time': 137087191433207430L}
+1 - Alarm: 	{'value': [5.0, 5.0], 'time': 137087191443207430L}
+1 - Alarm: 	{'value': [6.0, 6.0], 'time': 137087191453207430L}
+1 - Alarm: 	{'value': [7.0, 7.0], 'time': 137087191463207430L}
+1 - Alarm: 	{'value': [8.0, 8.0], 'time': 137087191473207430L}
+1 - Alarm: 	{'value': [9.0, 9.0], 'time': 137087191483207430L}
+1 - Alarm: 	{'value': [10.0, 10.0], 'time': 137087191493207430L}
+1 - 	MC_TEST_ALARMS_COMPONENT:longSeqROProp ['10']
+1 - Alarm: 	{'value': [1, 1], 'time': 137087191403240830L}
+1 - Alarm: 	{'value': [2, 2], 'time': 137087191413240830L}
+1 - Alarm: 	{'value': [3, 3], 'time': 137087191423240830L}
+1 - Alarm: 	{'value': [4, 4], 'time': 137087191433240830L}
+1 - Alarm: 	{'value': [5, 5], 'time': 137087191443240830L}
+1 - Alarm: 	{'value': [6, 6], 'time': 137087191453240830L}
+1 - Alarm: 	{'value': [7, 7], 'time': 137087191463240830L}
+1 - Alarm: 	{'value': [8, 8], 'time': 137087191473240830L}
+1 - Alarm: 	{'value': [9, 9], 'time': 137087191483240830L}
+1 - Alarm: 	{'value': [10, 10], 'time': 137087191493240830L}
+1 - 	MC_TEST_ALARMS_COMPONENT:uLongSeqROProp ['11']
+1 - Alarm: 	{'value': [1L, 1L], 'time': 137087191403270020L}
+1 - Alarm: 	{'value': [2L, 2L], 'time': 137087191413270020L}
+1 - Alarm: 	{'value': [3L, 3L], 'time': 137087191423270020L}
+1 - Alarm: 	{'value': [4L, 4L], 'time': 137087191433270020L}
+1 - Alarm: 	{'value': [5L, 5L], 'time': 137087191443270020L}
+1 - Alarm: 	{'value': [6L, 6L], 'time': 137087191453270020L}
+1 - Alarm: 	{'value': [7L, 7L], 'time': 137087191463270020L}
+1 - Alarm: 	{'value': [8L, 8L], 'time': 137087191473270020L}
+1 - Alarm: 	{'value': [9L, 9L], 'time': 137087191483270020L}
+1 - Alarm: 	{'value': [10L, 10L], 'time': 137087191493270020L}
+1 - 	MC_TEST_ALARMS_COMPONENT:booleanSeqROProp ['12']
+1 - Alarm: 	{'value': [True, True], 'time': 137087191403293930L}
+1 - Alarm: 	{'value': [True, True], 'time': 137087191413293930L}
+1 - Alarm: 	{'value': [True, True], 'time': 137087191423293930L}
+1 - Alarm: 	{'value': [True, True], 'time': 137087191433293930L}
+1 - Alarm: 	{'value': [True, True], 'time': 137087191443293930L}
+1 - Alarm: 	{'value': [True, True], 'time': 137087191453293930L}
+1 - Alarm: 	{'value': [True, True], 'time': 137087191463293930L}
+1 - Alarm: 	{'value': [True, True], 'time': 137087191473293930L}
+1 - Alarm: 	{'value': [True, True], 'time': 137087191483293930L}
+1 - Alarm: 	{'value': [True, True], 'time': 137087191493293930L}
+1 - 	MC_TEST_ALARMS_COMPONENT:EnumTestROProp ['13']
+1 - Alarm: 	{'value': 1L, 'time': 137087191403318550L}
+1 - Alarm: 	{'value': 2L, 'time': 137087191413318550L}
+1 - Alarm: 	{'value': 3L, 'time': 137087191423318550L}
+1 - Alarm: 	{'value': 4L, 'time': 137087191433318550L}
+1 - Alarm: 	{'value': 5L, 'time': 137087191443318550L}
+1 - Alarm: 	{'value': 6L, 'time': 137087191453318550L}
+1 - Alarm: 	{'value': 7L, 'time': 137087191463318550L}
+1 - Alarm: 	{'value': 8L, 'time': 137087191473318550L}
+1 - Alarm: 	{'value': 9L, 'time': 137087191483318550L}
+1 - Alarm: 	{'value': 10L, 'time': 137087191493318550L}
+1 - 2017-03-13T17:32:30.483 localdomain disconnect - Disconnect called for client
+1 - 2017-03-13T17:32:30.487 localdomain disconnect - Disconnect called for client

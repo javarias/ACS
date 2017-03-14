@@ -1,0 +1,9 @@
+0a1
+> 1 - 
+2a4,6
+> 1 - Java HotSpot(TM) 64-Bit Server VM (build 25.45-b02, mixed mode)
+> 1 - Java(TM) SE Runtime Environment (build 1.8.0_45-b14)
+> 1 - java version "1.8.0_45"
+6d9
+< 1 - ----------T--:--:--.--- INFO [acsStartJava] Starting Java application: alma.acs.testsupport.tat.TATJUnitRunner alma.TT.PropertySeqTest
+

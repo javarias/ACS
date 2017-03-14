@@ -1,0 +1,177 @@
+1 - === Starting PropertyDoubleTest JUnit test
+1 -  --endorsed -- alma.acs.testsupport.tat.TATJUnitRunner alma.PS.PropertyDoubleTest
+1 - 2017-03-13T17:25:46.896 INFO [acsStartJava] Starting Java application: alma.acs.testsupport.tat.TATJUnitRunner alma.PS.PropertyDoubleTest
+1 - 2017-03-13T17:25:46.911 INFO [acsStartJava] Using endorsed jar files in: -Djava.endorsed.dirs=/alma/ACS-FEB2017/ACSSW/intlist/JBACI-TEST/lib/endorsed:/alma/ACS-FEB2017/ACSSW/lib/endorsed:/alma/ACS-FEB2017/JacORB/lib/endorsed:
+1 - 2017-03-13T17:25:46.974 DEBUG [acsStartJava] exported CLASSPATH
+1 - 2017-03-13T17:25:46.983 DEBUG [acsStartJava] exported MANAGER_REFERENCE=corbaloc::127.0.0.1:3000/Manager
+1 - 2017-03-13T17:25:46.994 DEBUG [acsStartJava] ACS Manager: corbaloc::127.0.0.1:3000/Manager
+1 - 2017-03-13T17:25:47.005 DEBUG [acsStartJava] exported MANAGER_COMPUTER_NAME=127.0.0.1
+1 - 2017-03-13T17:25:47.014 DEBUG [acsStartJava] exported ACS_NAME_SERVICE=corbaloc::127.0.0.1:3001/NameService
+1 - 2017-03-13T17:25:47.021 DEBUG [acsStartJava] ACS Name Service: corbaloc::127.0.0.1:3001/NameService
+1 - 2017-03-13T17:25:47.118 DEBUG [acsStartJava] exported ACS_INTERFACE_REPOSITORY=IOR:010000003600000049444c3a6f6d672e6f72672f434f5242412f436f6d706f6e656e7449522f436f6d706f6e656e745265706f7369746f72793a312e30000000010000000000000070000000010102000a0000003132372e302e302e3100bc0b2300000014010f004e5550000000180000000001000000526f6f74504f41007265706f504f41000002000000000000000800000001000000004f41540100000018000000010000000100010001000000010001050901010000000000
+1 - 2017-03-13T17:25:47.129 DEBUG [acsStartJava] ACS Interface Repository: IOR:010000003600000049444c3a6f6d672e6f72672f434f5242412f436f6d706f6e656e7449522f436f6d706f6e656e745265706f7369746f72793a312e30000000010000000000000070000000010102000a0000003132372e302e302e3100bc0b2300000014010f004e5550000000180000000001000000526f6f74504f41007265706f504f41000002000000000000000800000001000000004f41540100000018000000010000000100010001000000010001050901010000000000
+1 - 2017-03-13T17:25:47.164 DEBUG [acsStartJava] Running the following command:
+1 - 2017-03-13T17:25:47.174 DEBUG [acsStartJava] java -classpath "/alma/ACS-FEB2017/ACSSW/lib/jACSUtil.jar::/alma/ACS-FEB2017/JacORB/lib/jacorb-3.6.1.jar:/alma/ACS-FEB2017/JacORB/lib/jacorb-services-3.6.1.jar:/alma/ACS-FEB2017/JacORB/lib/idl.jar:/alma/ACS-FEB2017/ant/lib/ant.jar:/alma/ACS-FEB2017/acsdata/config" "-Djava.endorsed.dirs=/alma/ACS-FEB2017/ACSSW/intlist/JBACI-TEST/lib/endorsed:/alma/ACS-FEB2017/ACSSW/lib/endorsed:/alma/ACS-FEB2017/JacORB/lib/endorsed:" -Dorg.apache.xerces.xni.parser.XMLParserConfiguration=org.apache.xerces.parsers.XIncludeParserConfiguration -Dorg.omg.CORBA.ORBClass=org.jacorb.orb.ORB -Dorg.omg.CORBA.ORBSingletonClass=org.jacorb.orb.ORBSingleton -Duser.timezone=UTC -DACS.manager=corbaloc::127.0.0.1:3000/Manager -DORBInitRef.NameService=corbaloc::127.0.0.1:3001/NameService  -DACS.repository=IOR:010000003600000049444c3a6f6d672e6f72672f434f5242412f436f6d706f6e656e7449522f436f6d706f6e656e745265706f7369746f72793a312e30000000010000000000000070000000010102000a0000003132372e302e302e3100bc0b2300000014010f004e5550000000180000000001000000526f6f74504f41007265706f504f41000002000000000000000800000001000000004f41540100000018000000010000000100010001000000010001050901010000000000 -DACS.tmp=/home/almamgr/git/ACS/LGPL/CommonSoftware/jbaci/test/tmp -DACS.baseport=0 -DACS.data=/alma/ACS-FEB2017/acsdata -DACS.logstdout=1 -DACS.log.minlevel.remote= -DACS.loggingBin=false  -Djava.system.class.loader=alma.acs.classloading.AcsSystemClassLoader    -Dacs.system.classpath.jardirs="../lib:/alma/ACS-FEB2017/ACSSW/intlist/JBACI-TEST/lib:/alma/ACS-FEB2017/ACSSW/lib"    -Dacs.system.path="..:/alma/ACS-FEB2017/ACSSW/intlist/JBACI-TEST:/alma/ACS-FEB2017/ACSSW" -Djava.util.logging.manager=alma.acs.logging.AcsLogManager -Dalma.acs.logging.useAcsLogServiceExtensions=1 -Dorg.apache.commons.logging.LogFactory=alma.acs.logging.adapters.CommonsLoggingFactory -Dorg.jboss.logging.provider=slf4j -server -XX:+UseG1GC -XX:MaxGCPauseMillis=200 -XX:ParallelGCThreads=20 -XX:ConcGCThreads=5 -XX:InitiatingHeapOccupancyPercent=70 -XX:+HeapDumpOnOutOfMemoryError -XX:HeapDumpPath=/alma/ACS-FEB2017/acsdata/dumps/localhost.localdomain/ACS_INSTANCE.0 -XX:ErrorFile=/alma/ACS-FEB2017/acsdata/dumps/localhost.localdomain/ACS_INSTANCE.0/jvm_fatal_error%p.log -showversion  alma.acs.testsupport.tat.TATJUnitRunner alma.PS.PropertyDoubleTest
+1 - java version "1.8.0_45"
+1 - Java(TM) SE Runtime Environment (build 1.8.0_45-b14)
+1 - Java HotSpot(TM) 64-Bit Server VM (build 25.45-b02, mixed mode)
+1 - 
+1 - TEST_RUNNER_REPORT success/total: 9/12
+1 - JUnitRunner: Errors and/or failures during test execution!
+1 - 
+1 - Test execution trace:
+1 - <<<<<<<<<<<<<<<<<<<
+1 - JUnit version 4.10
+1 - .E.E....E......
+1 - Time: 38.699
+1 - There were 3 failures:
+1 - 1) testCharacteristics(alma.PS.PropertyDoubleTest)
+1 - junit.framework.ComparisonFailure: expected:<[]readback> but was:<[PBEND_B_01:]readback>
+1 - 	at junit.framework.Assert.assertEquals(Assert.java:85)
+1 - 	at junit.framework.Assert.assertEquals(Assert.java:91)
+1 - 	at alma.PS.PropertyDoubleTest.testCharacteristics(PropertyDoubleTest.java:277)
+1 - 	at sun.reflect.NativeMethodAccessorImpl.invoke0(Native Method)
+1 - 	at sun.reflect.NativeMethodAccessorImpl.invoke(NativeMethodAccessorImpl.java:62)
+1 - 	at sun.reflect.DelegatingMethodAccessorImpl.invoke(DelegatingMethodAccessorImpl.java:43)
+1 - 	at java.lang.reflect.Method.invoke(Method.java:497)
+1 - 	at junit.framework.TestCase.runTest(TestCase.java:168)
+1 - 	at junit.framework.TestCase.runBare(TestCase.java:134)
+1 - 	at junit.framework.TestResult$1.protect(TestResult.java:110)
+1 - 	at junit.framework.TestResult.runProtected(TestResult.java:128)
+1 - 	at junit.framework.TestResult.run(TestResult.java:113)
+1 - 	at junit.framework.TestCase.run(TestCase.java:124)
+1 - 	at junit.framework.TestSuite.runTest(TestSuite.java:243)
+1 - 	at junit.framework.TestSuite.run(TestSuite.java:238)
+1 - 	at org.junit.internal.runners.JUnit38ClassRunner.run(JUnit38ClassRunner.java:83)
+1 - 	at org.junit.runners.Suite.runChild(Suite.java:128)
+1 - 	at org.junit.runners.Suite.runChild(Suite.java:24)
+1 - 	at org.junit.runners.ParentRunner$3.run(ParentRunner.java:231)
+1 - 	at org.junit.runners.ParentRunner$1.schedule(ParentRunner.java:60)
+1 - 	at org.junit.runners.ParentRunner.runChildren(ParentRunner.java:229)
+1 - 	at org.junit.runners.ParentRunner.access$000(ParentRunner.java:50)
+1 - 	at org.junit.runners.ParentRunner$2.evaluate(ParentRunner.java:222)
+1 - 	at org.junit.runners.ParentRunner.run(ParentRunner.java:300)
+1 - 	at org.junit.runner.JUnitCore.run(JUnitCore.java:157)
+1 - 	at org.junit.runner.JUnitCore.run(JUnitCore.java:136)
+1 - 	at org.junit.runner.JUnitCore.run(JUnitCore.java:117)
+1 - 	at alma.acs.testsupport.tat.TATJUnitRunner.runMain(TATJUnitRunner.java:218)
+1 - 	at alma.acs.testsupport.tat.TATJUnitRunner.main(TATJUnitRunner.java:290)
+1 - 2) testNewSubscriptionAlarm(alma.PS.PropertyDoubleTest)
+1 - org.omg.CORBA.NO_RESOURCES: Server-side Exception: null
+1 - 	at sun.reflect.NativeConstructorAccessorImpl.newInstance0(Native Method)
+1 - 	at sun.reflect.NativeConstructorAccessorImpl.newInstance(NativeConstructorAccessorImpl.java:62)
+1 - 	at sun.reflect.DelegatingConstructorAccessorImpl.newInstance(DelegatingConstructorAccessorImpl.java:45)
+1 - 	at java.lang.reflect.Constructor.newInstance(Constructor.java:422)
+1 - 	at org.jacorb.orb.SystemExceptionHelper.read(SystemExceptionHelper.java:222)
+1 - 	at org.jacorb.orb.ReplyReceiver.getReply(ReplyReceiver.java:458)
+1 - 	at org.jacorb.orb.Delegate._invoke_internal(Delegate.java:1410)
+1 - 	at org.jacorb.orb.Delegate.invoke_internal(Delegate.java:1172)
+1 - 	at org.jacorb.orb.Delegate.invoke(Delegate.java:1159)
+1 - 	at org.omg.CORBA.portable.ObjectImpl._invoke(ObjectImpl.java:80)
+1 - 	at alma.ACS._ROdoubleStub.new_subscription_Alarm(_ROdoubleStub.java:1553)
+1 - 	at alma.PS.PropertyDoubleTest.testNewSubscriptionAlarm(PropertyDoubleTest.java:304)
+1 - 	at sun.reflect.NativeMethodAccessorImpl.invoke0(Native Method)
+1 - 	at sun.reflect.NativeMethodAccessorImpl.invoke(NativeMethodAccessorImpl.java:62)
+1 - 	at sun.reflect.DelegatingMethodAccessorImpl.invoke(DelegatingMethodAccessorImpl.java:43)
+1 - 	at java.lang.reflect.Method.invoke(Method.java:497)
+1 - 	at junit.framework.TestCase.runTest(TestCase.java:168)
+1 - 	at junit.framework.TestCase.runBare(TestCase.java:134)
+1 - 	at junit.framework.TestResult$1.protect(TestResult.java:110)
+1 - 	at junit.framework.TestResult.runProtected(TestResult.java:128)
+1 - 	at junit.framework.TestResult.run(TestResult.java:113)
+1 - 	at junit.framework.TestCase.run(TestCase.java:124)
+1 - 	at junit.framework.TestSuite.runTest(TestSuite.java:243)
+1 - 	at junit.framework.TestSuite.run(TestSuite.java:238)
+1 - 	at org.junit.internal.runners.JUnit38ClassRunner.run(JUnit38ClassRunner.java:83)
+1 - 	at org.junit.runners.Suite.runChild(Suite.java:128)
+1 - 	at org.junit.runners.Suite.runChild(Suite.java:24)
+1 - 	at org.junit.runners.ParentRunner$3.run(ParentRunner.java:231)
+1 - 	at org.junit.runners.ParentRunner$1.schedule(ParentRunner.java:60)
+1 - 	at org.junit.runners.ParentRunner.runChildren(ParentRunner.java:229)
+1 - 	at org.junit.runners.ParentRunner.access$000(ParentRunner.java:50)
+1 - 	at org.junit.runners.ParentRunner$2.evaluate(ParentRunner.java:222)
+1 - 	at org.junit.runners.ParentRunner.run(ParentRunner.java:300)
+1 - 	at org.junit.runner.JUnitCore.run(JUnitCore.java:157)
+1 - 	at org.junit.runner.JUnitCore.run(JUnitCore.java:136)
+1 - 	at org.junit.runner.JUnitCore.run(JUnitCore.java:117)
+1 - 	at alma.acs.testsupport.tat.TATJUnitRunner.runMain(TATJUnitRunner.java:218)
+1 - 	at alma.acs.testsupport.tat.TATJUnitRunner.main(TATJUnitRunner.java:290)
+1 - 3) testGetHistory(alma.PS.PropertyDoubleTest)
+1 - junit.framework.AssertionFailedError: expected:<5> but was:<0>
+1 - 	at junit.framework.Assert.fail(Assert.java:50)
+1 - 	at junit.framework.Assert.failNotEquals(Assert.java:287)
+1 - 	at junit.framework.Assert.assertEquals(Assert.java:67)
+1 - 	at junit.framework.Assert.assertEquals(Assert.java:199)
+1 - 	at junit.framework.Assert.assertEquals(Assert.java:205)
+1 - 	at alma.PS.PropertyDoubleTest.testGetHistory(PropertyDoubleTest.java:406)
+1 - 	at sun.reflect.NativeMethodAccessorImpl.invoke0(Native Method)
+1 - 	at sun.reflect.NativeMethodAccessorImpl.invoke(NativeMethodAccessorImpl.java:62)
+1 - 	at sun.reflect.DelegatingMethodAccessorImpl.invoke(DelegatingMethodAccessorImpl.java:43)
+1 - 	at java.lang.reflect.Method.invoke(Method.java:497)
+1 - 	at junit.framework.TestCase.runTest(TestCase.java:168)
+1 - 	at junit.framework.TestCase.runBare(TestCase.java:134)
+1 - 	at junit.framework.TestResult$1.protect(TestResult.java:110)
+1 - 	at junit.framework.TestResult.runProtected(TestResult.java:128)
+1 - 	at junit.framework.TestResult.run(TestResult.java:113)
+1 - 	at junit.framework.TestCase.run(TestCase.java:124)
+1 - 	at junit.framework.TestSuite.runTest(TestSuite.java:243)
+1 - 	at junit.framework.TestSuite.run(TestSuite.java:238)
+1 - 	at org.junit.internal.runners.JUnit38ClassRunner.run(JUnit38ClassRunner.java:83)
+1 - 	at org.junit.runners.Suite.runChild(Suite.java:128)
+1 - 	at org.junit.runners.Suite.runChild(Suite.java:24)
+1 - 	at org.junit.runners.ParentRunner$3.run(ParentRunner.java:231)
+1 - 	at org.junit.runners.ParentRunner$1.schedule(ParentRunner.java:60)
+1 - 	at org.junit.runners.ParentRunner.runChildren(ParentRunner.java:229)
+1 - 	at org.junit.runners.ParentRunner.access$000(ParentRunner.java:50)
+1 - 	at org.junit.runners.ParentRunner$2.evaluate(ParentRunner.java:222)
+1 - 	at org.junit.runners.ParentRunner.run(ParentRunner.java:300)
+1 - 	at org.junit.runner.JUnitCore.run(JUnitCore.java:157)
+1 - 	at org.junit.runner.JUnitCore.run(JUnitCore.java:136)
+1 - 	at org.junit.runner.JUnitCore.run(JUnitCore.java:117)
+1 - 	at alma.acs.testsupport.tat.TATJUnitRunner.runMain(TATJUnitRunner.java:218)
+1 - 	at alma.acs.testsupport.tat.TATJUnitRunner.main(TATJUnitRunner.java:290)
+1 - 
+1 - FAILURES!!!
+1 - Tests run: 12,  Failures: 3
+1 - 
+1 - >>>>>>>>>>>>>>>>>>>
+1 - 
+1 - System.out during test execution:
+1 - <<<<<<<<<<<<<<<<<<<
+1 - 2017-03-13T17:25:48.503 TRACE [alma.acs.logging.config.LogConfig] ACS.log.minlevel.namedloggers not defined.
+1 - 2017-03-13T17:25:48.504 DELOUSE [alma.acs.logging.config.LogConfig] Logging configuration has been initialized, but not from CDB settings.
+1 - 2017-03-13T17:25:48.538 INFO [alma.acs.logging] Logger jacorb created with custom log levels local=Info, remote=Info to avoid log jams due to careless default log level settings.
+1 - 2017-03-13T17:25:48.572 WARNING [jacorb] jacorb.deferredArrayQueue has been removed.
+1 - 2017-03-13T17:25:49.267 WARNING [jacorb] jacorb.deferredArrayQueue has been removed.
+1 - 2017-03-13T17:25:49.458 WARNING [jacorb] jacorb.deferredArrayQueue has been removed.
+1 - 2017-03-13T17:25:49.592 WARNING [jacorb] jacorb.deferredArrayQueue has been removed.
+1 - 2017-03-13T17:25:49.766 (done) Value: 0.0
+1 - 2017-03-13T17:25:49.816 WARNING [jacorb] jacorb.deferredArrayQueue has been removed.
+1 - 2017-03-13T17:25:49.978 WARNING [jacorb] jacorb.deferredArrayQueue has been removed.
+1 - 2017-03-13T17:25:57.162 WARNING [jacorb] jacorb.deferredArrayQueue has been removed.
+1 - 2017-03-13T17:25:57.303 Value: 0.0
+1 - 2017-03-13T17:25:58.303 Value: 0.0
+1 - 2017-03-13T17:25:59.303 Value: 0.0
+1 - 2017-03-13T17:26:00.303 Value: 0.0
+1 - 2017-03-13T17:26:01.303 Value: 0.0
+1 - 2017-03-13T17:26:02.303 Value: 0.0
+1 - 2017-03-13T17:26:03.303 Value: 0.0
+1 - 2017-03-13T17:26:04.303 Value: 0.0
+1 - 2017-03-13T17:26:05.303 Value: 0.0
+1 - 2017-03-13T17:26:06.303 Value: 0.0
+1 - 2017-03-13T17:26:07.817 (done) Value: 0.0
+1 - 2017-03-13T17:26:07.938 WARNING [jacorb] jacorb.deferredArrayQueue has been removed.
+1 - ------
+1 - ------
+1 - 2017-03-13T17:26:26.123 (done) Value: 0.0
+1 - 2017-03-13T17:26:26.205 WARNING [jacorb] jacorb.deferredArrayQueue has been removed.
+1 - 2017-03-13T17:26:26.320 WARNING [jacorb] jacorb.deferredArrayQueue has been removed.
+1 - 2017-03-13T17:26:26.592 WARNING [jacorb] jacorb.deferredArrayQueue has been removed.
+1 - 2017-03-13T17:26:26.738 WARNING [jacorb] jacorb.deferredArrayQueue has been removed.
+1 - >>>>>>>>>>>>>>>>>>>
+1 - 
+1 - System.err during test execution:
+1 - <<<<<<<<<<<<<<<<<<<
+1 - >>>>>>>>>>>>>>>>>>>
+1 - 
+1 - === dispatchAction PropertyDouble test completed

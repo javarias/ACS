@@ -1,0 +1,10 @@
+*~
+bin/
+lib/
+object/
+tmp/
+tatlogs/
+*.log
+sed.scan
+.TestList.sed
+.testSession
