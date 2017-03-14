@@ -187,9 +187,9 @@ public class RWuLongImpl extends RWCommonComparablePropertyImpl implements RWuLo
 		try
 		{	
 			if (type == CallbackDispatcher.DONE_TYPE)
-				((CBlong)callback).done((int) ((Integer)value).intValue(), completion, desc);
+				((CBuLong)callback).done((int) ((Integer)value).intValue(), completion, desc);
 			else if (type == CallbackDispatcher.WORKING_TYPE)
-				((CBlong)callback).working((int) ((Integer)value).intValue(), completion, desc);
+				((CBuLong)callback).working((int) ((Integer)value).intValue(), completion, desc);
 			else 
 				return false;
 				

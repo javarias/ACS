@@ -118,9 +118,9 @@ public class ROulongImpl extends ROCommonComparablePropertyImpl implements ROuLo
 		try
 		{	
 			if (type == CallbackDispatcher.DONE_TYPE)
-				((CBlong)callback).done(((Integer)value).intValue(), completion, desc);
+				((CBuLong)callback).done(((Integer)value).intValue(), completion, desc);
 			else if (type == CallbackDispatcher.WORKING_TYPE)
-				((CBlong)callback).working(((Integer)value).intValue(), completion, desc);
+				((CBuLong)callback).working(((Integer)value).intValue(), completion, desc);
 			else 
 				return false;
 				

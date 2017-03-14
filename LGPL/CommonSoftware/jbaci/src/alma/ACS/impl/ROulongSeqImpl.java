@@ -115,9 +115,9 @@ public class ROulongSeqImpl extends ROCommonComparablePropertyImpl implements RO
 		try
 		{	
 			if (type == CallbackDispatcher.DONE_TYPE)
-				((CBlongSeq)callback).done(((int[])value), completion, desc);
+				((CBuLongSeq)callback).done(((int[])value), completion, desc);
 			else if (type == CallbackDispatcher.WORKING_TYPE)
-				((CBlongSeq)callback).working(((int[])value), completion, desc);
+				((CBuLongSeq)callback).working(((int[])value), completion, desc);
 			else 
 				return false;
 				
