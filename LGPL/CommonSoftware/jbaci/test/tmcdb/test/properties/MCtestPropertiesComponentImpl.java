@@ -134,42 +134,42 @@ public class MCtestPropertiesComponentImpl extends CharacteristicComponentImpl
 
 	//RO
 	private ROdouble m_doubleROProp_p;
-	private double m_doubleROVal = 0.0;
+	private double m_doubleROVal = 1.0;
 	private long m_time1 = 134608945243381570L;
 	private DataAccess<Double> m_doubleRODevIO = new MCtestDevIONoIncremental<Double>(m_time1, m_doubleROVal);
 	
 	private ROfloat m_floatROProp_p;
-	private float m_floatROVal = 0.0F;
+	private float m_floatROVal = 2.0F;
 	private long m_time2 = 134608945243381570L;
 	private DataAccess<Float> m_floatRODevIO = new MCtestDevIONoIncremental<Float>(m_time2, m_floatROVal);
 	
 	private ROlong m_longROProp_p;
-	private long m_longROVal = 0;
+	private int m_longROVal = 3;
 	private long m_time3 = 134608945243381570L;
-	private DataAccess<Long> m_longRODevIO = new MCtestDevIONoIncremental<Long>(m_time3, m_longROVal);
+	private DataAccess<Integer> m_longRODevIO = new MCtestDevIONoIncremental<Integer>(m_time3, m_longROVal);
 	
 	private ROuLong m_uLongROProp_p;
-	private long m_uLongROVal = 0;
+	private int m_uLongROVal = 4;
 	private long m_time4 = 134608945243381570L;
-	private DataAccess<Long> m_uLongRODevIO = new MCtestDevIONoIncremental<Long>(m_time4, m_uLongROVal);
+	private DataAccess<Integer> m_uLongRODevIO = new MCtestDevIONoIncremental<Integer>(m_time4, m_uLongROVal);
 	
 	private ROpattern m_patternROProp_p;
-	private long m_patternROVal = 0;
+	private long m_patternROVal = 5;
 	private long m_time5 = 134608945243381570L;
 	private DataAccess<Long> m_patternRODevIO = new MCtestDevIONoIncremental<Long>(m_time5, m_patternROVal);
 	
 	private ROstring m_stringROProp_p;
-	private String m_stringROVal = "";
+	private String m_stringROVal = "strinRO";
 	private long m_time6 = 134608945243381570L;
 	private DataAccess<String> m_stringRODevIO = new MCtestDevIONoIncremental<String>(m_time6, m_stringROVal);
 	
 	private ROlongLong m_longLongROProp_p;
-	private long m_longLongROVal = 0;
+	private long m_longLongROVal = 6;
 	private long m_time7 = 134608945243381570L;
 	private DataAccess<Long> m_longLongRODevIO = new MCtestDevIONoIncremental<Long>(m_time7, m_longLongROVal);
 	
 	private ROuLongLong m_uLongLongROProp_p;
-	private long m_uLongLongROVal = 0;
+	private long m_uLongLongROVal = 7;
 	private long m_time8 = 134608945243381570L;
 	private DataAccess<Long> m_ulongLongRODevIO = new MCtestDevIONoIncremental<Long>(m_time8, m_uLongLongROVal);
 	
@@ -179,27 +179,27 @@ public class MCtestPropertiesComponentImpl extends CharacteristicComponentImpl
 	private DataAccess<Boolean> m_booleanRODevIo = new MCtestDevIONoIncremental<Boolean>(m_time9, m_booleanROVal);
 	
 	private ROdoubleSeq m_doubleSeqROProp_p;
-	private double[] m_doubleSeqROVal = new double[] {0.0, 0.0};
+	private double[] m_doubleSeqROVal = new double[] {8.0, 9.0};
 	private long m_time10 = 134608945243381570L;
 	private DataAccess<double[]> m_doubleSeqRODevIO = new MCtestDevIONoIncremental<double[]>(m_time10, m_doubleSeqROVal);
 	
 	private ROfloatSeq m_floatSeqROProp_p;
-	private float[] m_floatSeqROVal  = new float[] {0.0F, 0.0F};
+	private float[] m_floatSeqROVal  = new float[] {10.0F, 11.0F};
 	private long m_time11 = 134608945243381570L;
 	private DataAccess<float[]> m_floatSeqRODevIO = new MCtestDevIONoIncremental<float[]>(m_time11, m_floatSeqROVal);
 	
 	private ROlongSeq m_longSeqROProp_p;
-	private long[] m_longSeqROVal = new long[] {0, 0};
+	private int[] m_longSeqROVal = new int[] {12, 13};
 	private long m_time12 = 134608945243381570L;
-	private DataAccess<long[]> m_longSeqRODevIO = new MCtestDevIONoIncremental<>(m_time12, m_longSeqROVal);
+	private DataAccess<int[]> m_longSeqRODevIO = new MCtestDevIONoIncremental<int[]>(m_time12, m_longSeqROVal);
 	
 	private ROuLongSeq m_uLongSeqROProp_p;
-	private long[] m_uLongSeqROVal = new long[] {0, 0};
+	private int[] m_uLongSeqROVal = new int[] {14, 15};
 	private long m_time13 = 134608945243381570L;
-	private DataAccess<long[]> m_ulongSeqRODevIO = new MCtestDevIONoIncremental<long[]>(m_time13, m_uLongSeqROVal);
+	private DataAccess<int[]> m_ulongSeqRODevIO = new MCtestDevIONoIncremental<int[]>(m_time13, m_uLongSeqROVal);
 	
 	private RObooleanSeq m_booleanSeqROProp_p;
-	private boolean[] m_booleanSeqROVal = new boolean[]{false, false};
+	private boolean[] m_booleanSeqROVal = new boolean[]{false, true};
 	private long m_time14 = 134608945243381570L;
 	private DataAccess<boolean[]> m_booleanSeqRODevIO = new MCtestDevIONoIncremental<boolean[]>(m_time14, m_booleanSeqROVal);
 	
@@ -210,72 +210,72 @@ public class MCtestPropertiesComponentImpl extends CharacteristicComponentImpl
 	
 	//RW
 	private RWdouble m_doubleRWProp_p;
-	private double m_doubleRWVal = 0D;
+	private double m_doubleRWVal = 16D;
 	private long m_time16 = 134608945243381570L;
 	private DataAccess<Double> m_doubleRWDevIO =  new MCtestDevIONoIncremental<Double>(m_time16, m_doubleRWVal);
 	
 	private RWfloat m_floatRWProp_p;
-	private float m_floatRWVal = 0F;
+	private float m_floatRWVal = 17F;
 	private long m_time17 = 134608945243381570L;
 	private DataAccess<Float> m_floatRWDevIO = new MCtestDevIONoIncremental<Float>(m_time17, m_floatRWVal);
 	
 	private RWlong m_longRWProp_p;
-	private int m_longRWVal = 0;
+	private int m_longRWVal = 18;
 	private long m_time18 = 134608945243381570L;
 	private DataAccess<Integer> m_longRWDevIO = new MCtestDevIONoIncremental<Integer>(m_time18, m_longRWVal);
 	
 	private RWuLong m_uLongRWProp_p;
-	private int m_uLongRWVal = 0;
+	private int m_uLongRWVal = 19;
 	private long m_time19 = 134608945243381570L;
 	private DataAccess<Integer> m_uLongRWDevIO = new MCtestDevIONoIncremental<Integer>(m_time19, m_uLongRWVal);
 	
 	private RWpattern m_patternRWProp_p;
-	private long m_patternRWVal = 0;
+	private long m_patternRWVal = 20;
 	private long m_time20 = 134608945243381570L;
 	private DataAccess<Long> m_patternRWDevIO = new MCtestDevIONoIncremental<Long>(m_time20, m_patternRWVal);
 	
 	private RWstring m_stringRWProp_p;
-	private String m_stringRWVal = "";
+	private String m_stringRWVal = "stringRW";
 	private long m_time21 = 134608945243381570L;
 	private DataAccess<String> m_stringRWDevIO = new MCtestDevIONoIncremental<String>(m_time21, m_stringRWVal);
 	
 	private RWlongLong m_longLongRWProp_p;
-	private long m_longLongRWVal = 0;
+	private long m_longLongRWVal = 21;
 	private long m_time22 = 134608945243381570L;
 	private DataAccess<Long> m_longLongRWDevIO = new MCtestDevIONoIncremental<Long>(m_time22, m_longLongRWVal);
 	
 	private RWuLongLong m_uLongLongRWProp_p;
-	private long m_uLongLongRWVal = 0;
+	private long m_uLongLongRWVal = 22;
 	private long m_time23 = 134608945243381570L;
 	private DataAccess<Long> m_uLongLongRWDevIO = new MCtestDevIONoIncremental<Long>(m_time23, m_uLongLongRWVal);
 	
 	private RWboolean m_booleanRWProp_p;
-	private boolean m_booleanRWVal = false;
+	private boolean m_booleanRWVal = true;
 	private long m_time24 = 134608945243381570L;
 	private DataAccess<Boolean> m_booleanRWDevIO = new MCtestDevIONoIncremental<Boolean>(m_time24, m_booleanRWVal);
 	
 	private RWdoubleSeq m_doubleSeqRWProp_p;
-	private double[] m_doubleSeqRWVal = new double[]{0D, 0D};
+	private double[] m_doubleSeqRWVal = new double[]{23D, 24D};
 	private long m_time25 = 134608945243381570L;
 	private DataAccess<double[]> m_doubleSeqRWDevIO = new MCtestDevIONoIncremental<double[]>(m_time25, m_doubleSeqRWVal);
 	
 	private RWfloatSeq m_floatSeqRWProp_p;
-	private float[] m_floatSeqRWVal = new float[] {0F, 0F};
+	private float[] m_floatSeqRWVal = new float[] {25F, 26F};
 	private long m_time26 = 134608945243381570L;
 	private DataAccess<float[]> m_floatSeqRWDevIO = new MCtestDevIONoIncremental<float[]>(m_time26, m_floatSeqRWVal);
 	
 	private RWlongSeq m_longSeqRWProp_p;
-	private int[] m_longSeqRWVal = new int[]{0 ,0};
+	private int[] m_longSeqRWVal = new int[]{27 ,28};
 	private long m_time27 = 134608945243381570L;
 	private DataAccess<int[]> m_longSeqRWDevIO = new MCtestDevIONoIncremental<int[]>(m_time27, m_longSeqRWVal);
 	
 	private RWuLongSeq m_uLongSeqRWProp_p;
-	private int[] m_uLongSeqRWVal = new int[]{0 ,0};
+	private int[] m_uLongSeqRWVal = new int[]{29 ,30};
 	private long m_time28 = 134608945243381570L;
 	private DataAccess<int[]> m_uLongSeqRWDevIO = new MCtestDevIONoIncremental<int[]>(m_time28, m_uLongSeqRWVal);
 	
 	private RWbooleanSeq m_booleanSeqRWProp_p;
-	private boolean[] m_booleanSeqRWVal = new boolean[] {false, false};
+	private boolean[] m_booleanSeqRWVal = new boolean[] {true, false};
 	private long m_time29 = 134608945243381570L;
 	private DataAccess<boolean[]> m_booleanSeqRWDevIO = new MCtestDevIONoIncremental<boolean[]>(m_time29, m_booleanSeqRWVal);
 	
