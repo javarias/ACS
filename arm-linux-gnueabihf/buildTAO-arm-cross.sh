@@ -8,7 +8,7 @@ fi
 # rm -rf $ACE_ROOT
 mkdir -p $ACE_ROOT
 
-tar -xvjf ../ExtProd/PRODUCTS/ACE+TAO-6.3.0.tar.gz -C $ACE_ROOT/..
+tar -xvzf ../ExtProd/PRODUCTS/ACE+TAO-6.3.0.tar.gz -C $ACE_ROOT/..
 
 
 cp platform_macros.GNU $ACE_ROOT/TAO/ACE_wrappers/build/linux/include/makeinclude/platform_macros.GNU
