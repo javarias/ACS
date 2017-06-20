@@ -5,7 +5,7 @@ if [ -z $CROSS_COMPILE ]; then
 	exit -1
 fi
 
-rm -rf $ACE_ROOT
+# rm -rf $ACE_ROOT
 mkdir -p $ACE_ROOT
 
 tar -xvjf ../ExtProd/PRODUCTS/ACE+TAO-6.3.0.tar.gz -C $ACE_ROOT/..
